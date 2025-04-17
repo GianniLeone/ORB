@@ -1,0 +1,26 @@
+{
+  "timestamp": "2025-04-16T20:17:30.275085",
+  "portfolio_value": {
+    "cash": 39333.56,
+    "portfolio_value": 98912.56,
+    "positions_value": 59579.0
+  },
+  "results": [
+    {
+      "article": "Apple\u3001\u6700\u5f8c\u306eIntel Mac mini\u3068\u306a\u308b\u300cMac mini (2018)\u300d\u3084\u300cMacBook Pro (13-inch, 2019, 2 TBT3)\u300d\u3001\u300ciPhone 6s\u300d\u30b7\u30ea\u30fc\u30ba\u306a\u3069\u3092\u30d3\u30f3\u30c6\u30fc\u30b8\u88fd\u54c1\u306b\u8ffd\u52a0\u3002",
+      "sentiment": "Bullish",
+      "company": "Apple",
+      "symbol": "AAPL",
+      "decision": "BUY",
+      "trade_executed": true
+    },
+    {
+      "article": "Here's How Much You Would Have Made Owning Alphabet Stock In The Last 15 Years",
+      "sentiment": "Bullish",
+      "company": "Alphabet",
+      "symbol": "GOOGL",
+      "decision": "BUY",
+      "trade_executed": true
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "timestamp": "2025-04-16T14:32:57.148223",
+  "portfolio_value": {
+    "cash": 39333.56,
+    "portfolio_value": 99039.5,
+    "positions_value": 59705.94
+  },
+  "results": [
+    {
+      "article": "Google\u2019s New A.I. Model Aims to Decipher Dolphin Language",
+      "sentiment": "Neutral",
+      "company": "Google",
+      "symbol": "GOOGL",
+      "decision": "HOLD",
+      "trade_executed": false
+    },
+    {
+      "article": "Apple Dodged a Bullet, but the Stock Still Isn't a Buy",
+      "sentiment": "Neutral",
+      "company": "Apple",
+      "symbol": "AAPL",
+      "decision": "HOLD",
+      "trade_executed": false
+    },
+    {
+      "article": "Trump promises 'expedited' process for Nvidia's US supercomputer plans as Big Tech pledges top $1.6 trillion",
+      "sentiment": "Bullish",
+      "company": "Nvidia",
+      "symbol": "NVDA",
+      "decision": "BUY",
+      "trade_executed": true
+    }
+  ]
+}

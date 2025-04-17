@@ -1,0 +1,362 @@
+2025-04-15 23:54:02,898 - INFO - Starting simplified news trading bot
+2025-04-15 23:54:02,898 - INFO - Starting trading cycle
+2025-04-15 23:54:03,286 - INFO - Connected to Alpaca account: a1f52315-0e30-4012-bf25-411d24167840
+2025-04-15 23:54:03,286 - INFO - Cash balance: $100000.00
+2025-04-15 23:54:03,286 - INFO - Portfolio value: $100000.00
+2025-04-15 23:54:03,648 - INFO - Found 10 articles
+2025-04-15 23:54:03,649 - INFO - Processing: Google Layoffs Coming to India: Tech Giant To Lay Off Advertising, Marketing and Sales Team From Ben...
+2025-04-15 23:54:04,879 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 23:54:04,887 - INFO - Sentiment: Bearish
+2025-04-15 23:54:04,887 - INFO - Related companies: ['Google']
+2025-04-15 23:54:04,888 - INFO - Matched company 'Google' to symbol GOOGL
+2025-04-15 23:54:05,691 - ERROR - Error in trading bot: 'Portfolio' object has no attribute 'positions'
+2025-04-15 23:56:41,811 - INFO - Starting simplified news trading bot
+2025-04-15 23:56:41,811 - INFO - Starting trading cycle
+2025-04-15 23:56:42,075 - INFO - Connected to Alpaca account: a1f52315-0e30-4012-bf25-411d24167840
+2025-04-15 23:56:42,075 - INFO - Cash balance: $100000.00
+2025-04-15 23:56:42,075 - INFO - Portfolio value: $100000.00
+2025-04-15 23:56:42,293 - INFO - Found 10 articles
+2025-04-15 23:56:42,293 - INFO - Processing: Google Layoffs Coming to India: Tech Giant To Lay Off Advertising, Marketing and Sales Team From Ben...
+2025-04-15 23:56:42,973 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 23:56:42,992 - INFO - Sentiment: Bearish
+2025-04-15 23:56:42,992 - INFO - Related companies: ['Google']
+2025-04-15 23:56:42,992 - INFO - Matched company 'Google' to symbol GOOGL
+2025-04-15 23:56:43,540 - INFO - No position in GOOGL to sell: position does not exist
+2025-04-15 23:56:43,541 - INFO - Processing: Retailer Kathmandu victim of imposter scam shop on Facebook, says problem rampant online...
+2025-04-15 23:56:43,971 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 23:56:43,973 - INFO - Sentiment: Neutral
+2025-04-15 23:56:43,974 - INFO - Related companies: []
+2025-04-15 23:56:43,974 - INFO - Processing: Meta gets EU regulator nod to train AI with social media content...
+2025-04-15 23:56:44,576 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 23:56:44,578 - INFO - Sentiment: Bullish
+2025-04-15 23:56:44,578 - INFO - Related companies: ['Meta']
+2025-04-15 23:56:44,578 - INFO - Matched company 'Meta' to symbol META
+2025-04-15 23:56:44,799 - ERROR - Error in trading bot: 'Portfolio' object has no attribute 'cash'
+2025-04-15 23:57:56,943 - INFO - Starting simplified news trading bot
+2025-04-15 23:57:56,943 - INFO - Starting trading cycle
+2025-04-15 23:57:57,226 - INFO - Connected to Alpaca account: a1f52315-0e30-4012-bf25-411d24167840
+2025-04-15 23:57:57,227 - INFO - Cash balance: $100000.00
+2025-04-15 23:57:57,227 - INFO - Portfolio value: $100000.00
+2025-04-15 23:57:57,360 - INFO - Found 10 articles
+2025-04-15 23:57:57,361 - INFO - Processing: Google Layoffs Coming to India: Tech Giant To Lay Off Advertising, Marketing and Sales Team From Ben...
+2025-04-15 23:57:57,944 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 23:57:57,954 - INFO - Sentiment: Bearish
+2025-04-15 23:57:57,954 - INFO - Related companies: ['Google']
+2025-04-15 23:57:57,954 - INFO - Matched company 'Google' to symbol GOOGL
+2025-04-15 23:57:58,576 - INFO - No position in GOOGL to sell: position does not exist
+2025-04-15 23:57:58,576 - INFO - Processing: Retailer Kathmandu victim of imposter scam shop on Facebook, says problem rampant online...
+2025-04-15 23:57:59,068 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 23:57:59,070 - INFO - Sentiment: Neutral
+2025-04-15 23:57:59,071 - INFO - Related companies: []
+2025-04-15 23:57:59,071 - INFO - Processing: Meta gets EU regulator nod to train AI with social media content...
+2025-04-15 23:58:00,166 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-15 23:58:00,174 - INFO - Sentiment: Bullish
+2025-04-15 23:58:00,174 - INFO - Related companies: ['Meta', 'Apple']
+2025-04-15 23:58:00,174 - INFO - Matched company 'Meta' to symbol META
+2025-04-15 23:58:00,560 - INFO - Submitted buy order for 13 shares of META
+2025-04-15 23:59:00,873 - WARNING - Timeout waiting for order e5d34a9d-7971-45c9-b1c9-0ab653ecc44c to fill
+2025-04-15 23:59:00,875 - ERROR - Order for META failed or didn't fill
+2025-04-15 23:59:00,876 - INFO - Matched company 'Apple' to symbol AAPL
+2025-04-15 23:59:01,289 - INFO - Submitted buy order for 34 shares of AAPL
+2025-04-16 00:00:01,580 - WARNING - Timeout waiting for order d07d4d6c-9c2e-4462-8b74-6dcd90937fe3 to fill
+2025-04-16 00:00:01,580 - ERROR - Order for AAPL failed or didn't fill
+2025-04-16 00:00:01,580 - INFO - Processing: Mark Zuckerberg defends Meta in social media monopoly trial...
+2025-04-16 00:00:02,363 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 00:00:02,366 - INFO - Sentiment: Neutral
+2025-04-16 00:00:02,366 - INFO - Related companies: ['Meta']
+2025-04-16 00:00:02,366 - INFO - Matched company 'Meta' to symbol META
+2025-04-16 00:00:02,485 - INFO - Processing: Meta warned Government of ‘unsustainable’ operating environment for tech companies in EU...
+2025-04-16 00:00:02,986 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 00:00:02,988 - INFO - Sentiment: Neutral
+2025-04-16 00:00:02,989 - INFO - Related companies: ['Meta']
+2025-04-16 00:00:02,989 - INFO - Matched company 'Meta' to symbol META
+2025-04-16 00:00:03,050 - INFO - Processing: Netflix Looking to Join '$1T Club'...
+2025-04-16 00:00:03,694 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 00:00:03,697 - INFO - Sentiment: Bullish
+2025-04-16 00:00:03,697 - INFO - Related companies: ['Netflix']
+2025-04-16 00:00:03,697 - INFO - Processing: 30 Under 30 Europe Retail & Ecommerce 2025: Entrepreneurs Bringing Commerce Into The AI Age...
+2025-04-16 00:00:04,470 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 00:00:04,482 - INFO - Sentiment: Bullish
+2025-04-16 00:00:04,483 - INFO - Related companies: ['Apple', 'Tesla']
+2025-04-16 00:00:04,483 - INFO - Matched company 'Apple' to symbol AAPL
+2025-04-16 00:00:04,849 - INFO - Submitted buy order for 34 shares of AAPL
+2025-04-16 00:07:35,446 - INFO - Starting simplified news trading bot
+2025-04-16 00:07:35,446 - INFO - Starting trading cycle
+2025-04-16 00:07:35,773 - INFO - Connected to Alpaca account: a1f52315-0e30-4012-bf25-411d24167840
+2025-04-16 00:07:35,774 - INFO - Cash balance: $100000.00
+2025-04-16 00:07:35,774 - INFO - Portfolio value: $100000.00
+2025-04-16 00:07:35,774 - INFO - Fetching news with query: AAPL OR MSFT OR GOOGL OR AMZN OR META
+2025-04-16 00:07:36,114 - INFO - Received 10 articles from News API
+2025-04-16 00:07:36,115 - INFO - Found 10 articles
+2025-04-16 00:07:36,115 - INFO - Processing: Rep. Marjorie Taylor Greene Acquires Shares of Apple Inc. (NASDAQ:AAPL)...
+2025-04-16 00:07:37,195 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 00:07:37,205 - INFO - GPT response received, parsing result
+2025-04-16 00:07:37,205 - INFO - Sentiment: Bullish
+2025-04-16 00:07:37,205 - INFO - Related companies: ['Apple']
+2025-04-16 00:07:37,205 - INFO - Matched company 'Apple' to symbol AAPL
+2025-04-16 00:07:37,205 - INFO - Getting historical data for AAPL
+2025-04-16 00:07:37,751 - INFO - AAPL 5-day change: 1.65%
+2025-04-16 00:07:37,751 - INFO - Making trading decision for AAPL with sentiment: Bullish
+2025-04-16 00:07:37,751 - INFO - Decision: BUY AAPL (Bullish sentiment, 5-day change < 5%)
+2025-04-16 00:07:37,963 - INFO - Submitted buy order for 34 shares of AAPL
+2025-04-16 00:07:37,964 - INFO - Waiting for order 7ac77f78-aed1-4c57-99d1-95cc27e841ad to fill (timeout: 30s)
+2025-04-16 00:07:38,031 - INFO - Order status: accepted - waiting...
+2025-04-16 00:07:40,105 - INFO - Order status: accepted - waiting...
+2025-04-16 00:07:42,178 - INFO - Order status: accepted - waiting...
+2025-04-16 00:07:44,252 - INFO - Order status: accepted - waiting...
+2025-04-16 00:07:46,330 - INFO - Order status: accepted - waiting...
+2025-04-16 00:07:48,402 - INFO - Order status: accepted - waiting...
+2025-04-16 00:07:50,488 - INFO - Order status: accepted - waiting...
+2025-04-16 00:07:52,566 - INFO - Order status: accepted - waiting...
+2025-04-16 00:07:54,645 - INFO - Order status: accepted - waiting...
+2025-04-16 00:07:56,778 - INFO - Order status: accepted - waiting...
+2025-04-16 00:07:58,858 - INFO - Order status: accepted - waiting...
+2025-04-16 00:08:00,935 - INFO - Order status: accepted - waiting...
+2025-04-16 00:08:03,005 - INFO - Order status: accepted - waiting...
+2025-04-16 00:08:05,082 - INFO - Order status: accepted - waiting...
+2025-04-16 00:08:07,157 - INFO - Order status: accepted - waiting...
+2025-04-16 00:08:09,159 - WARNING - Timeout waiting for order 7ac77f78-aed1-4c57-99d1-95cc27e841ad to fill
+2025-04-16 00:08:09,160 - ERROR - Order for AAPL failed or didn't fill
+2025-04-16 00:08:09,160 - INFO - Processing: Space Stocks To Watch Now – April 13th...
+2025-04-16 00:08:09,980 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 00:08:09,983 - INFO - GPT response received, parsing result
+2025-04-16 00:08:09,983 - INFO - Sentiment: Bullish
+2025-04-16 00:08:09,983 - INFO - Related companies: ['Alphabet', 'Boeing', 'General Electric']
+2025-04-16 00:08:09,983 - INFO - Matched company 'Alphabet' to symbol GOOGL
+2025-04-16 00:08:09,983 - INFO - Getting historical data for GOOGL
+2025-04-16 00:08:10,095 - INFO - GOOGL 5-day change: -1.51%
+2025-04-16 00:08:10,095 - INFO - Making trading decision for GOOGL with sentiment: Bullish
+2025-04-16 00:08:10,095 - INFO - Decision: BUY GOOGL (Bullish sentiment, 5-day change < 5%)
+2025-04-16 00:08:10,269 - INFO - Submitted buy order for 44 shares of GOOGL
+2025-04-16 00:08:10,269 - INFO - Waiting for order ba98b1f0-b913-4b27-aa47-86041c5f2b4f to fill (timeout: 30s)
+2025-04-16 00:08:10,340 - INFO - Order status: accepted - waiting...
+2025-04-16 00:08:12,411 - INFO - Order status: accepted - waiting...
+2025-04-16 00:08:14,488 - INFO - Order status: accepted - waiting...
+2025-04-16 00:08:16,563 - INFO - Order status: accepted - waiting...
+2025-04-16 00:08:18,642 - INFO - Order status: accepted - waiting...
+2025-04-16 00:08:20,718 - INFO - Order status: accepted - waiting...
+2025-04-16 00:08:22,795 - INFO - Order status: accepted - waiting...
+2025-04-16 00:08:24,873 - INFO - Order status: accepted - waiting...
+2025-04-16 00:08:26,949 - INFO - Order status: accepted - waiting...
+2025-04-16 00:08:29,023 - INFO - Order status: accepted - waiting...
+2025-04-16 00:08:31,103 - INFO - Order status: accepted - waiting...
+2025-04-16 00:09:17,263 - INFO - Starting simplified news trading bot
+2025-04-16 00:09:17,263 - INFO - Starting trading cycle
+2025-04-16 00:09:17,516 - INFO - Connected to Alpaca account: a1f52315-0e30-4012-bf25-411d24167840
+2025-04-16 00:09:17,516 - INFO - Cash balance: $100000.00
+2025-04-16 00:09:17,517 - INFO - Portfolio value: $100000.00
+2025-04-16 00:09:17,517 - INFO - Fetching news with query: AAPL OR MSFT OR GOOGL OR AMZN OR META
+2025-04-16 00:09:17,748 - INFO - Received 10 articles from News API
+2025-04-16 00:09:17,749 - INFO - Found 10 articles
+2025-04-16 00:09:17,749 - INFO - Processing: Rep. Marjorie Taylor Greene Acquires Shares of Apple Inc. (NASDAQ:AAPL)...
+2025-04-16 00:09:18,432 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 00:09:18,440 - INFO - GPT response received, parsing result
+2025-04-16 00:09:18,440 - INFO - Sentiment: Bullish
+2025-04-16 00:09:18,440 - INFO - Related companies: ['Apple']
+2025-04-16 00:09:18,440 - INFO - Matched company 'Apple' to symbol AAPL
+2025-04-16 00:09:18,441 - INFO - Getting historical data for AAPL
+2025-04-16 00:09:18,968 - INFO - AAPL 5-day change: 1.65%
+2025-04-16 00:09:18,969 - INFO - Making trading decision for AAPL with sentiment: Bullish
+2025-04-16 00:09:18,969 - INFO - Decision: BUY AAPL (Bullish sentiment, 5-day change < 5%)
+2025-04-16 00:09:19,183 - INFO - Submitted buy order for 34 shares of AAPL
+2025-04-16 00:09:19,183 - INFO - Waiting for order 623746ca-f100-48a5-b8fb-ed6965efeade to fill (timeout: 30s)
+2025-04-16 00:09:19,252 - INFO - Order status: accepted - waiting...
+2025-04-16 00:09:21,330 - INFO - Order status: accepted - waiting...
+2025-04-16 00:09:23,409 - INFO - Order status: accepted - waiting...
+2025-04-16 00:09:25,487 - INFO - Order status: accepted - waiting...
+2025-04-16 00:09:27,566 - INFO - Order status: accepted - waiting...
+2025-04-16 00:09:29,644 - INFO - Order status: accepted - waiting...
+2025-04-16 00:09:31,717 - INFO - Order status: accepted - waiting...
+2025-04-16 00:09:33,804 - INFO - Order status: accepted - waiting...
+2025-04-16 00:09:35,885 - INFO - Order status: accepted - waiting...
+2025-04-16 00:09:37,963 - INFO - Order status: accepted - waiting...
+2025-04-16 00:09:40,038 - INFO - Order status: accepted - waiting...
+2025-04-16 00:09:42,114 - INFO - Order status: accepted - waiting...
+2025-04-16 00:09:44,194 - INFO - Order status: accepted - waiting...
+2025-04-16 00:09:46,269 - INFO - Order status: accepted - waiting...
+2025-04-16 00:09:48,346 - INFO - Order status: accepted - waiting...
+2025-04-16 00:09:50,351 - WARNING - Timeout waiting for order 623746ca-f100-48a5-b8fb-ed6965efeade to fill
+2025-04-16 00:09:50,352 - ERROR - Order for AAPL failed or didn't fill
+2025-04-16 00:09:50,352 - INFO - Processing: Space Stocks To Watch Now – April 13th...
+2025-04-16 00:09:51,149 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 00:09:51,152 - INFO - GPT response received, parsing result
+2025-04-16 00:09:51,152 - INFO - Sentiment: Bullish
+2025-04-16 00:09:51,152 - INFO - Related companies: ['Alphabet', 'Boeing', 'General Electric']
+2025-04-16 00:09:51,152 - INFO - Matched company 'Alphabet' to symbol GOOGL
+2025-04-16 00:09:51,152 - INFO - Getting historical data for GOOGL
+2025-04-16 00:09:51,305 - INFO - GOOGL 5-day change: -1.51%
+2025-04-16 00:09:51,305 - INFO - Making trading decision for GOOGL with sentiment: Bullish
+2025-04-16 00:09:51,305 - INFO - Decision: BUY GOOGL (Bullish sentiment, 5-day change < 5%)
+2025-04-16 00:09:51,568 - INFO - Submitted buy order for 44 shares of GOOGL
+2025-04-16 00:09:51,568 - INFO - Waiting for order 3d75d965-0256-4ef6-9f6e-6d555bbd373e to fill (timeout: 30s)
+2025-04-16 00:09:51,637 - INFO - Order status: accepted - waiting...
+2025-04-16 00:09:53,719 - INFO - Order status: accepted - waiting...
+2025-04-16 00:09:55,800 - INFO - Order status: accepted - waiting...
+2025-04-16 00:09:57,881 - INFO - Order status: accepted - waiting...
+2025-04-16 00:09:59,962 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:02,040 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:04,116 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:06,241 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:08,319 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:10,396 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:12,474 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:14,554 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:16,635 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:18,709 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:20,786 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:22,791 - WARNING - Timeout waiting for order 3d75d965-0256-4ef6-9f6e-6d555bbd373e to fill
+2025-04-16 00:10:22,792 - ERROR - Order for GOOGL failed or didn't fill
+2025-04-16 00:10:22,792 - INFO - Processing: Irish Data Regulator Probes X For Using EU Users’ Data to Train Grok...
+2025-04-16 00:10:23,293 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 00:10:23,296 - INFO - GPT response received, parsing result
+2025-04-16 00:10:23,296 - INFO - Sentiment: Neutral
+2025-04-16 00:10:23,296 - INFO - Related companies: ['Twitter']
+2025-04-16 00:10:23,296 - INFO - Processing: Google Layoffs Coming to India: Tech Giant To Lay Off Advertising, Marketing and Sales Team From Ben...
+2025-04-16 00:10:23,918 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 00:10:23,922 - INFO - GPT response received, parsing result
+2025-04-16 00:10:23,922 - INFO - Sentiment: Bearish
+2025-04-16 00:10:23,922 - INFO - Related companies: ['Google']
+2025-04-16 00:10:23,922 - INFO - Matched company 'Google' to symbol GOOGL
+2025-04-16 00:10:23,922 - INFO - Getting historical data for GOOGL
+2025-04-16 00:10:24,027 - INFO - GOOGL 5-day change: -1.51%
+2025-04-16 00:10:24,027 - INFO - Making trading decision for GOOGL with sentiment: Bearish
+2025-04-16 00:10:24,027 - INFO - Decision: SELL GOOGL (Bearish sentiment)
+2025-04-16 00:10:24,094 - INFO - No position in GOOGL to sell: position does not exist
+2025-04-16 00:10:24,095 - INFO - Processing: Retailer Kathmandu victim of imposter scam shop on Facebook, says problem rampant online...
+2025-04-16 00:10:24,636 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 00:10:24,639 - INFO - GPT response received, parsing result
+2025-04-16 00:10:24,639 - INFO - Sentiment: Neutral
+2025-04-16 00:10:24,639 - INFO - Related companies: []
+2025-04-16 00:10:24,639 - INFO - Processing: Meta gets EU regulator nod to train AI with social media content...
+2025-04-16 00:10:25,352 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 00:10:25,354 - INFO - GPT response received, parsing result
+2025-04-16 00:10:25,355 - INFO - Sentiment: Bullish
+2025-04-16 00:10:25,355 - INFO - Related companies: ['Meta']
+2025-04-16 00:10:25,355 - INFO - Matched company 'Meta' to symbol META
+2025-04-16 00:10:25,355 - INFO - Getting historical data for META
+2025-04-16 00:10:25,464 - INFO - META 5-day change: -10.97%
+2025-04-16 00:10:25,464 - INFO - Making trading decision for META with sentiment: Bullish
+2025-04-16 00:10:25,464 - INFO - Decision: BUY META (Bullish sentiment, 5-day change < 5%)
+2025-04-16 00:10:25,685 - INFO - Submitted buy order for 13 shares of META
+2025-04-16 00:10:25,686 - INFO - Waiting for order b67bcfb9-5d14-424a-bffd-cc78f7c662bf to fill (timeout: 30s)
+2025-04-16 00:10:25,755 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:27,833 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:29,910 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:31,985 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:34,062 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:36,142 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:38,220 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:40,321 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:42,399 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:44,479 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:46,560 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:48,640 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:50,723 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:52,801 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:54,876 - INFO - Order status: accepted - waiting...
+2025-04-16 00:10:56,879 - WARNING - Timeout waiting for order b67bcfb9-5d14-424a-bffd-cc78f7c662bf to fill
+2025-04-16 00:10:56,879 - ERROR - Order for META failed or didn't fill
+2025-04-16 00:10:56,879 - INFO - Processing: Mark Zuckerberg defends Meta in social media monopoly trial...
+2025-04-16 00:10:57,710 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 00:10:57,712 - INFO - GPT response received, parsing result
+2025-04-16 00:10:57,712 - INFO - Sentiment: Neutral
+2025-04-16 00:10:57,713 - INFO - Related companies: ['Meta']
+2025-04-16 00:10:57,713 - INFO - Matched company 'Meta' to symbol META
+2025-04-16 00:10:57,713 - INFO - Getting historical data for META
+2025-04-16 00:10:57,829 - INFO - META 5-day change: -10.97%
+2025-04-16 00:10:57,829 - INFO - Making trading decision for META with sentiment: Neutral
+2025-04-16 00:10:57,829 - INFO - Decision: HOLD META (Neutral sentiment)
+2025-04-16 00:10:57,829 - INFO - Processing: Meta warned Government of ‘unsustainable’ operating environment for tech companies in EU...
+2025-04-16 00:10:58,358 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 00:10:58,363 - INFO - GPT response received, parsing result
+2025-04-16 00:10:58,363 - INFO - Sentiment: Neutral
+2025-04-16 00:10:58,364 - INFO - Related companies: ['Meta']
+2025-04-16 00:10:58,364 - INFO - Matched company 'Meta' to symbol META
+2025-04-16 00:10:58,364 - INFO - Getting historical data for META
+2025-04-16 00:10:58,421 - INFO - META 5-day change: -10.97%
+2025-04-16 00:10:58,421 - INFO - Making trading decision for META with sentiment: Neutral
+2025-04-16 00:10:58,421 - INFO - Decision: HOLD META (Neutral sentiment)
+2025-04-16 00:10:58,421 - INFO - Processing: Netflix Looking to Join '$1T Club'...
+2025-04-16 00:10:58,939 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 00:10:58,942 - INFO - GPT response received, parsing result
+2025-04-16 00:10:58,942 - INFO - Sentiment: Bullish
+2025-04-16 00:10:58,942 - INFO - Related companies: ['Netflix']
+2025-04-16 00:10:58,942 - INFO - Processing: 30 Under 30 Europe Retail & Ecommerce 2025: Entrepreneurs Bringing Commerce Into The AI Age...
+2025-04-16 00:10:59,825 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 00:10:59,829 - INFO - GPT response received, parsing result
+2025-04-16 00:10:59,829 - INFO - Sentiment: Bullish
+2025-04-16 00:10:59,829 - INFO - Related companies: ['Apple', 'Tesla']
+2025-04-16 00:10:59,829 - INFO - Matched company 'Apple' to symbol AAPL
+2025-04-16 00:10:59,829 - INFO - Getting historical data for AAPL
+2025-04-16 00:10:59,976 - INFO - AAPL 5-day change: 1.65%
+2025-04-16 00:10:59,976 - INFO - Making trading decision for AAPL with sentiment: Bullish
+2025-04-16 00:10:59,976 - INFO - Decision: BUY AAPL (Bullish sentiment, 5-day change < 5%)
+2025-04-16 00:11:00,211 - INFO - Submitted buy order for 34 shares of AAPL
+2025-04-16 00:11:00,212 - INFO - Waiting for order 15c99773-5688-4845-a0fc-4e6d97505e11 to fill (timeout: 30s)
+2025-04-16 00:11:00,281 - INFO - Order status: accepted - waiting...
+2025-04-16 00:11:02,356 - INFO - Order status: accepted - waiting...
+2025-04-16 00:11:04,435 - INFO - Order status: accepted - waiting...
+2025-04-16 00:11:06,521 - INFO - Order status: accepted - waiting...
+2025-04-16 00:11:08,612 - INFO - Order status: accepted - waiting...
+2025-04-16 00:11:10,689 - INFO - Order status: accepted - waiting...
+2025-04-16 00:11:12,767 - INFO - Order status: accepted - waiting...
+2025-04-16 00:11:14,837 - INFO - Order status: accepted - waiting...
+2025-04-16 14:32:52,250 - INFO - Starting Direct News Trader Bot
+2025-04-16 14:32:52,251 - INFO - Starting trading cycle
+2025-04-16 14:32:52,251 - INFO - Connecting to Alpaca account
+2025-04-16 14:32:52,791 - INFO - Connected to Alpaca account: a1f52315-0e30-4012-bf25-411d24167840
+2025-04-16 14:32:52,791 - INFO - Cash balance: $39333.56
+2025-04-16 14:32:52,791 - INFO - Portfolio value: $99039.50
+2025-04-16 14:32:52,791 - INFO - Fetching news articles
+2025-04-16 14:32:52,791 - INFO - Fetching news with query: AAPL OR MSFT OR GOOGL
+2025-04-16 14:32:53,113 - INFO - Received 5 articles from News API
+2025-04-16 14:32:53,113 - INFO - Processing 5 articles
+2025-04-16 14:32:53,113 - INFO - Processing: Google’s New A.I. Model Aims to Decipher Dolphin Language...
+2025-04-16 14:32:53,114 - INFO - Sending request to OpenAI API
+2025-04-16 14:32:54,176 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 14:32:54,182 - INFO - GPT response received
+2025-04-16 14:32:54,183 - INFO - Sentiment: Neutral
+2025-04-16 14:32:54,183 - INFO - Related companies: ['Google']
+2025-04-16 14:32:54,183 - INFO - Matched company 'Google' to symbol GOOGL
+2025-04-16 14:32:54,183 - INFO - Making trading decision for GOOGL with sentiment: Neutral
+2025-04-16 14:32:54,183 - INFO - Decision: HOLD GOOGL (Neutral sentiment)
+2025-04-16 14:32:54,183 - INFO - Processing: Google’s New A.I. Model Aims to Decipher Dolphin Language...
+2025-04-16 14:32:54,183 - INFO - Sending request to OpenAI API
+2025-04-16 14:32:54,740 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 14:32:54,742 - INFO - GPT response received
+2025-04-16 14:32:54,743 - INFO - Sentiment: Neutral
+2025-04-16 14:32:54,743 - INFO - Related companies: []
+2025-04-16 14:32:54,743 - INFO - Processing: Apple Dodged a Bullet, but the Stock Still Isn't a Buy...
+2025-04-16 14:32:54,743 - INFO - Sending request to OpenAI API
+2025-04-16 14:32:55,290 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 14:32:55,293 - INFO - GPT response received
+2025-04-16 14:32:55,293 - INFO - Sentiment: Neutral
+2025-04-16 14:32:55,294 - INFO - Related companies: ['Apple']
+2025-04-16 14:32:55,294 - INFO - Matched company 'Apple' to symbol AAPL
+2025-04-16 14:32:55,294 - INFO - Making trading decision for AAPL with sentiment: Neutral
+2025-04-16 14:32:55,294 - INFO - Decision: HOLD AAPL (Neutral sentiment)
+2025-04-16 14:32:55,294 - INFO - Processing: Tale of 2 playbooks: As mom and pop rush in, the smart money backs off...
+2025-04-16 14:32:55,294 - INFO - Sending request to OpenAI API
+2025-04-16 14:32:55,765 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 14:32:55,768 - INFO - GPT response received
+2025-04-16 14:32:55,768 - INFO - Sentiment: Neutral
+2025-04-16 14:32:55,768 - INFO - Related companies: []
+2025-04-16 14:32:55,768 - INFO - Processing: Trump promises 'expedited' process for Nvidia's US supercomputer plans as Big Tech pledges top $1.6 ...
+2025-04-16 14:32:55,769 - INFO - Sending request to OpenAI API
+2025-04-16 14:32:56,314 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 14:32:56,317 - INFO - GPT response received
+2025-04-16 14:32:56,317 - INFO - Sentiment: Bullish
+2025-04-16 14:32:56,317 - INFO - Related companies: ['Nvidia']
+2025-04-16 14:32:56,317 - INFO - Matched company 'Nvidia' to symbol NVDA
+2025-04-16 14:32:56,317 - INFO - Making trading decision for NVDA with sentiment: Bullish
+2025-04-16 14:32:56,317 - INFO - Decision: BUY NVDA (Bullish sentiment)
+2025-04-16 14:32:56,317 - INFO - Calculated position size for NVDA: $6932.77
+2025-04-16 14:32:56,977 - INFO - Submitting order to buy 66 shares of NVDA
+2025-04-16 14:32:57,078 - INFO - Buy order submitted for NVDA: b7e3c78a-deb5-40df-ab12-5f1797af22f0
+2025-04-16 14:32:57,148 - INFO - Results saved to file
+2025-04-16 14:32:57,149 - INFO - 
+TRADING RESULTS SUMMARY:
+2025-04-16 14:32:57,149 - INFO - Processed 5 articles
+2025-04-16 14:32:57,149 - INFO - Made 3 trading decisions
+2025-04-16 14:32:57,149 - INFO - Portfolio value: $99039.50
+2025-04-16 14:32:57,149 - INFO - Direct News Trader Bot completed successfully
