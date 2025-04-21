@@ -265,6 +265,11 @@ class ORBNewsTrader:
                 if test_date.weekday() < 5:  # Weekday only (0-4 are Mon-Fri)
                     trading_days.append(test_date)
             
+            # Variables to track if we found valid data
+            found_valid_data = False
+            opening_bars = None
+            test_date = None
+            
             # Try each trading day until we find valid opening range data
             for test_date in trading_days:
                 test_date_str = test_date.strftime("%Y-%m-%d")
@@ -280,33 +285,37 @@ class ORBNewsTrader:
                 range_end_time = market_open_time + pd.Timedelta(minutes=ORB_TIMEFRAME)
                 
                 # If we have 1-minute bars, try to find opening range
-                if bars is not None and not bars.empty:
+                if bars is not None and not isinstance(bars, bool) and len(bars) > 0:
                     # Filter bars for this specific date
                     day_bars = bars[bars.index.date == test_date.date()]
                     
-                    # Find bars within opening range
-                    opening_bars = day_bars[(day_bars.index >= market_open_time) & 
+                    # Find bars within opening range - explicitly check length to avoid ambiguous truth value
+                    opening_range_bars = day_bars[(day_bars.index >= market_open_time) & 
                                         (day_bars.index <= range_end_time)]
                     
-                    if not opening_bars.empty:
+                    if len(opening_range_bars) > 0:
                         # We found valid 1-minute data for opening range
+                        opening_bars = opening_range_bars
+                        found_valid_data = True
                         break
                 
                 # If we couldn't find 1-minute data, try 5-minute bars as fallback
-                if not locals().get('opening_bars') or opening_bars.empty:
+                if not found_valid_data:
                     logger.info(f"Trying 5-minute bars for {symbol} on {test_date_str}")
                     bars_5min = self.fetch_historical_bars(symbol, timeframe="5Min", limit=100)
                     
-                    if bars_5min is not None and not bars_5min.empty:
+                    if bars_5min is not None and not isinstance(bars_5min, bool) and len(bars_5min) > 0:
                         day_bars_5min = bars_5min[bars_5min.index.date == test_date.date()]
-                        opening_bars = day_bars_5min[(day_bars_5min.index >= market_open_time) & 
+                        opening_range_bars = day_bars_5min[(day_bars_5min.index >= market_open_time) & 
                                                 (day_bars_5min.index <= range_end_time)]
                         
-                        if not opening_bars.empty:
+                        if len(opening_range_bars) > 0:
                             # Found 5-minute data for opening range
+                            opening_bars = opening_range_bars
+                            found_valid_data = True
                             break
             
-            if not locals().get('opening_bars') or opening_bars.empty:
+            if not found_valid_data or opening_bars is None or len(opening_bars) == 0:
                 logger.warning(f"Could not find opening range data for {symbol} in past week")
                 return None
             
@@ -320,7 +329,7 @@ class ORBNewsTrader:
             # Store the opening range
             orb_data = {
                 "symbol": symbol,
-                "date": test_date_str,
+                "date": test_date.strftime("%Y-%m-%d"),
                 "range_start": market_open_time.isoformat(),
                 "range_end": range_end_time.isoformat(),
                 "high": float(opening_high),
@@ -337,7 +346,7 @@ class ORBNewsTrader:
             
             logger.info(f"Calculated opening range for {symbol}: high=${opening_high:.2f}, low=${opening_low:.2f}")
             return orb_data
-                
+            
         except Exception as e:
             logger.error(f"Error calculating opening range for {symbol}: {e}")
             return None
@@ -1189,7 +1198,93 @@ def test_timezone():
         else:
             logger.info(f"Timezone consistency check passed: ET hour is {et_now.hour}")
     
-    return et_now        
+    return et_now 
+
+def verify_api_keys(check_type="all"):
+    """
+    Verify that API keys are valid
+    
+    Args:
+        check_type (str): Type of check to perform - "all", "alpaca", "openai", or "news"
+    
+    Returns:
+        dict: Results of the verification with success status and any error messages
+    """
+    results = {
+        "success": True,
+        "errors": [],
+        "details": {}
+    }
+    
+    # Check Alpaca API
+    if check_type in ["all", "alpaca"]:
+        try:
+            account = alpaca.get_account()
+            results["details"]["alpaca"] = {
+                "success": True,
+                "account_id": account.id,
+                "portfolio_value": float(account.portfolio_value),
+                "cash": float(account.cash)
+            }
+            logger.info(f"Alpaca API connection successful: Account ID {account.id}")
+        except Exception as e:
+            error_msg = f"Alpaca API error: {e}"
+            results["errors"].append(error_msg)
+            results["details"]["alpaca"] = {"success": False, "error": str(e)}
+            results["success"] = False
+            logger.error(error_msg)
+    
+    # Check OpenAI API
+    if check_type in ["all", "openai"]:
+        try:
+            response = openai_client.chat.completions.create(
+                model="gpt-3.5-turbo",
+                messages=[{"role": "system", "content": "You are a helpful assistant."}, 
+                          {"role": "user", "content": "Say hello"}],
+                max_tokens=5
+            )
+            results["details"]["openai"] = {
+                "success": True,
+                "model": "gpt-3.5-turbo",
+                "response": response.choices[0].message.content
+            }
+            logger.info("OpenAI API connection successful")
+        except Exception as e:
+            error_msg = f"OpenAI API error: {e}"
+            results["errors"].append(error_msg)
+            results["details"]["openai"] = {"success": False, "error": str(e)}
+            results["success"] = False
+            logger.error(error_msg)
+    
+    # Check News API
+    if check_type in ["all", "news"]:
+        try:
+            url = f"https://newsapi.org/v2/everything?q=test&pageSize=1&apiKey={NEWS_API_KEY}"
+            response = requests.get(url)
+            if response.status_code == 200:
+                results["details"]["news"] = {
+                    "success": True,
+                    "status_code": response.status_code
+                }
+                logger.info("News API connection successful")
+            else:
+                error_msg = f"News API error: {response.status_code} - {response.text}"
+                results["errors"].append(error_msg)
+                results["details"]["news"] = {
+                    "success": False, 
+                    "status_code": response.status_code,
+                    "response": response.text[:100]
+                }
+                results["success"] = False
+                logger.error(error_msg)
+        except Exception as e:
+            error_msg = f"News API error: {e}"
+            results["errors"].append(error_msg)
+            results["details"]["news"] = {"success": False, "error": str(e)}
+            results["success"] = False
+            logger.error(error_msg)
+    
+    return results       
 
 def main():
     """Main function for the trading bot"""
@@ -1197,6 +1292,18 @@ def main():
     
     # Test timezone functionality first
     test_timezone()
+    
+    # Verify API keys
+    api_results = verify_api_keys()
+    if not api_results["success"]:
+        logger.error("API key verification failed:")
+        for error in api_results["errors"]:
+            logger.error(f"  - {error}")
+        
+        if "openai" in api_results["details"] and not api_results["details"]["openai"]["success"]:
+            logger.error("OpenAI API key is not working - please check your .env file")
+            logger.error("Trading will continue but sentiment analysis will be limited")
+            # We can still continue since the bot can work without sentiment analysis
     
     try:
         # Initialize and run the bot

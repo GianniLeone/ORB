@@ -188,8 +188,28 @@ def get_current_market_period():
             return "overnight"
 
 def should_run_now():
-    """Determine if the bot should run now based on time and configuration"""
-    # Check if enough time has passed since last run
+    """Determine if the bot should run now based on time and preferred intervals"""
+    # Get current Eastern Time
+    et_now = get_eastern_time()
+    
+    # Get the current minute of the hour
+    current_minute = et_now.minute
+    
+    # Define the preferred minutes to run (0, 15, 30, 45)
+    preferred_minutes = [0, 15, 30, 45]
+    
+    # Check if we're close to a preferred minute (within 1 minute)
+    for pref_min in preferred_minutes:
+        # Calculate how far we are from this preferred minute
+        # Handle case where we're near the hour boundary (e.g., 59 is close to 0)
+        min_distance = min(abs(current_minute - pref_min), 
+                          abs((current_minute + 60) % 60 - pref_min))
+        
+        if min_distance <= 1:
+            logger.info(f"Running at a preferred interval (minute {current_minute}, near {pref_min})")
+            return True
+    
+    # If we're not at a preferred minute, check if enough time has passed since last run
     last_run_file = Path("data/last_run.txt")
     if last_run_file.exists():
         try:
@@ -369,9 +389,43 @@ def test_timezone():
     
     return et_now
 
+def check_api_keys_before_market():
+    """Check API keys before market open to ensure everything is working"""
+    et_now = get_eastern_time()
+    
+    # Check if we're in pre-market period (4am to 9:30am ET)
+    is_pre_market = (4 <= et_now.hour < 9) or (et_now.hour == 9 and et_now.minute < 30)
+    
+    if is_pre_market:
+        logger.info("Performing pre-market API key verification")
+        
+        # Import the function from the trading bot
+        try:
+            from windows_trader import verify_api_keys
+            
+            # Check all API keys
+            results = verify_api_keys()
+            
+            if not results["success"]:
+                logger.error("API key verification failed before market open:")
+                for error in results["errors"]:
+                    logger.error(f"  - {error}")
+                
+                # Check if OpenAI API specifically failed
+                if "openai" in results["details"] and not results["details"]["openai"]["success"]:
+                    logger.error("OpenAI API key is not working - please fix before market open")
+                    
+                    # You could add notification code here (email, SMS, etc.)
+                    # Example: send_notification("OpenAI API key is not working")
+            else:
+                logger.info("All API keys verified successfully before market open")
+        
+        except ImportError:
+            logger.error("Could not import verify_api_keys function from windows_trader")
+        except Exception as e:
+            logger.error(f"Error checking API keys before market: {e}")
+
 def main_loop():
-    # Test timezone functionality first
-    test_timezone()
     """Main scheduler loop"""
     global running
     
@@ -397,6 +451,9 @@ def main_loop():
             try:
                 # Log current status
                 log_status()
+                
+                # Check API keys during pre-market hours
+                check_api_keys_before_market()
                 
                 # Check if we should run now
                 if should_run_now():
