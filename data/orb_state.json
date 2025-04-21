@@ -1,0 +1,262 @@
+{
+  "orb_ranges": {},
+  "news_sentiment": {
+    "AAPL": [
+      {
+        "sentiment": "Bullish",
+        "article_title": "Is Meta Platforms, Inc. (META) the Best Metaverse Stock to Invest in?",
+        "article_url": "https://finance.yahoo.com/news/meta-platforms-inc-meta-best-235527388.html",
+        "timestamp": "2025-04-20T21:22:25.185445"
+      },
+      {
+        "sentiment": "Bullish",
+        "article_title": "Is Meta Platforms, Inc. (META) the Best Metaverse Stock to Invest in?",
+        "article_url": "https://finance.yahoo.com/news/meta-platforms-inc-meta-best-235527388.html",
+        "timestamp": "2025-04-20T22:07:48.751290"
+      },
+      {
+        "sentiment": "Neutral",
+        "article_title": "Taxes on super rich and tech giants stall under Trump",
+        "article_url": "https://economictimes.indiatimes.com/news/international/global-trends/taxes-on-super-rich-and-tech-giants-stall-under-trump/articleshow/120447581.cms",
+        "timestamp": "2025-04-20T22:53:00.552076"
+      },
+      {
+        "sentiment": "Neutral",
+        "article_title": "Taxes on super rich and tech giants stall under Trump",
+        "article_url": "https://www.digitaljournal.com/world/taxes-on-super-rich-and-tech-giants-stall-under-trump/article",
+        "timestamp": "2025-04-20T22:53:00.989491"
+      },
+      {
+        "sentiment": "Bearish",
+        "article_title": "Taxes On Super Rich And Tech Giants Stall Under Trump",
+        "article_url": "https://www.ibtimes.com/taxes-super-rich-tech-giants-stall-under-trump-3770698",
+        "timestamp": "2025-04-20T22:53:01.642847"
+      }
+    ],
+    "NVDA": [
+      {
+        "sentiment": "Bullish",
+        "article_title": "Billionaire fund manager makes bold bets on Meta, Nvidia stock",
+        "article_url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_f9844787-7322-4f36-81fb-3a903a10c072",
+        "timestamp": "2025-04-20T09:26:23.352576"
+      },
+      {
+        "sentiment": "Bullish",
+        "article_title": "Billionaire fund manager makes bold bets on Meta, Nvidia stock",
+        "article_url": "https://biztoc.com/x/62d8583a842c233a",
+        "timestamp": "2025-04-20T09:46:32.415683"
+      },
+      {
+        "sentiment": "Bullish",
+        "article_title": "Billionaire fund manager makes bold bets on Meta, Nvidia stock",
+        "article_url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_f9844787-7322-4f36-81fb-3a903a10c072",
+        "timestamp": "2025-04-20T09:46:33.975830"
+      },
+      {
+        "sentiment": "Bullish",
+        "article_title": "Billionaire fund manager makes bold bets on Meta, Nvidia stock",
+        "article_url": "https://biztoc.com/x/62d8583a842c233a",
+        "timestamp": "2025-04-20T10:01:43.316824"
+      },
+      {
+        "sentiment": "Bullish",
+        "article_title": "Billionaire fund manager makes bold bets on Meta, Nvidia stock",
+        "article_url": "https://biztoc.com/x/62d8583a842c233a",
+        "timestamp": "2025-04-20T10:17:01.006355"
+      }
+    ],
+    "META": [
+      {
+        "sentiment": "Bearish",
+        "article_title": "Week in Review: Google loses a major antitrust case",
+        "article_url": "https://biztoc.com/x/0d7359f7a212e50b",
+        "timestamp": "2025-04-20T20:37:06.195693"
+      },
+      {
+        "sentiment": "Bearish",
+        "article_title": "Week in Review: Google loses a major antitrust case",
+        "article_url": "https://biztoc.com/x/0d7359f7a212e50b",
+        "timestamp": "2025-04-20T21:22:23.060234"
+      },
+      {
+        "sentiment": "Bearish",
+        "article_title": "Week in Review: Google loses a major antitrust case",
+        "article_url": "https://biztoc.com/x/0d7359f7a212e50b",
+        "timestamp": "2025-04-20T22:07:46.784714"
+      },
+      {
+        "sentiment": "Neutral",
+        "article_title": "Meta adding safety features for kids using Facebook, Instagram",
+        "article_url": "https://www.wsbtv.com/news/local/atlanta/meta-adding-safety-features-kids-using-facebook-instagram/37IFWYZ6ZFFV7KQ2OO5IEXVZ4M/",
+        "timestamp": "2025-04-20T22:53:02.478787"
+      },
+      {
+        "sentiment": "Bearish",
+        "article_title": "Week in Review: Google loses a major antitrust case",
+        "article_url": "https://biztoc.com/x/0d7359f7a212e50b",
+        "timestamp": "2025-04-20T22:53:03.362304"
+      }
+    ],
+    "GOOGL": [
+      {
+        "sentiment": "Bearish",
+        "article_title": "Week in Review: Google loses a major antitrust case",
+        "article_url": "https://biztoc.com/x/0d7359f7a212e50b",
+        "timestamp": "2025-04-20T19:51:50.506109"
+      },
+      {
+        "sentiment": "Bearish",
+        "article_title": "Week in Review: Google loses a major antitrust case",
+        "article_url": "https://biztoc.com/x/0d7359f7a212e50b",
+        "timestamp": "2025-04-20T20:37:06.195346"
+      },
+      {
+        "sentiment": "Bearish",
+        "article_title": "Week in Review: Google loses a major antitrust case",
+        "article_url": "https://biztoc.com/x/0d7359f7a212e50b",
+        "timestamp": "2025-04-20T21:22:23.059878"
+      },
+      {
+        "sentiment": "Bearish",
+        "article_title": "Week in Review: Google loses a major antitrust case",
+        "article_url": "https://biztoc.com/x/0d7359f7a212e50b",
+        "timestamp": "2025-04-20T22:07:46.784345"
+      },
+      {
+        "sentiment": "Bearish",
+        "article_title": "Week in Review: Google loses a major antitrust case",
+        "article_url": "https://biztoc.com/x/0d7359f7a212e50b",
+        "timestamp": "2025-04-20T22:53:03.361991"
+      }
+    ],
+    "MSFT": [
+      {
+        "sentiment": "Bearish",
+        "article_title": "Attackers exploited SonicWall SMA appliances since January 2025",
+        "article_url": "https://securityaffairs.com/176706/security/attackers-exploited-sonicwall-sma-appliances-since-january-2025.html",
+        "timestamp": "2025-04-20T13:03:07.957798"
+      },
+      {
+        "sentiment": "Neutral",
+        "article_title": "Attackers exploited SonicWall SMA appliances since January 2025",
+        "article_url": "https://securityaffairs.com/176706/security/attackers-exploited-sonicwall-sma-appliances-since-january-2025.html",
+        "timestamp": "2025-04-20T13:18:17.233108"
+      },
+      {
+        "sentiment": "Bearish",
+        "article_title": "Attackers exploited SonicWall SMA appliances since January 2025",
+        "article_url": "https://securityaffairs.com/176706/security/attackers-exploited-sonicwall-sma-appliances-since-january-2025.html",
+        "timestamp": "2025-04-20T13:33:25.894912"
+      },
+      {
+        "sentiment": "Bearish",
+        "article_title": "Attackers exploited SonicWall SMA appliances since January 2025",
+        "article_url": "https://securityaffairs.com/176706/security/attackers-exploited-sonicwall-sma-appliances-since-january-2025.html",
+        "timestamp": "2025-04-20T13:48:42.756901"
+      },
+      {
+        "sentiment": "Neutral",
+        "article_title": "Attackers exploited SonicWall SMA appliances since January 2025",
+        "article_url": "https://securityaffairs.com/176706/security/attackers-exploited-sonicwall-sma-appliances-since-january-2025.html",
+        "timestamp": "2025-04-20T14:03:51.512482"
+      }
+    ],
+    "AMZN": [
+      {
+        "sentiment": "Bullish",
+        "article_title": "Why Amazon.com (AMZN) Is the Best Blue Chip Stock to Buy According to Billionaires",
+        "article_url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_19250746-61ca-4319-8fb6-2a497f814358",
+        "timestamp": "2025-04-20T10:16:58.450754"
+      },
+      {
+        "sentiment": "Bearish",
+        "article_title": "Report: 6 Big Tech Giants Dodged $278 Billion in Corporate Tax over Last Decade",
+        "article_url": "https://www.breitbart.com/tech/2025/04/19/report-6-big-tech-giants-dodged-278-billion-in-corporate-tax-over-last-decade/",
+        "timestamp": "2025-04-20T10:17:00.384456"
+      },
+      {
+        "sentiment": "Bullish",
+        "article_title": "Why Amazon.com (AMZN) Is the Best Blue Chip Stock to Buy According to Billionaires",
+        "article_url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_19250746-61ca-4319-8fb6-2a497f814358",
+        "timestamp": "2025-04-20T10:32:09.173756"
+      },
+      {
+        "sentiment": "Bearish",
+        "article_title": "Report: 6 Big Tech Giants Dodged $278 Billion in Corporate Tax over Last Decade",
+        "article_url": "https://www.breitbart.com/tech/2025/04/19/report-6-big-tech-giants-dodged-278-billion-in-corporate-tax-over-last-decade/",
+        "timestamp": "2025-04-20T10:32:11.168201"
+      },
+      {
+        "sentiment": "Bullish",
+        "article_title": "Why Amazon.com (AMZN) Is the Best Blue Chip Stock to Buy According to Billionaires",
+        "article_url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_19250746-61ca-4319-8fb6-2a497f814358",
+        "timestamp": "2025-04-20T10:47:19.967168"
+      }
+    ],
+    "TSLA": [
+      {
+        "sentiment": "Bullish",
+        "article_title": "Is Meta Platforms, Inc. (META) the Best Metaverse Stock to Invest in?",
+        "article_url": "https://finance.yahoo.com/news/meta-platforms-inc-meta-best-235527388.html",
+        "timestamp": "2025-04-20T21:22:25.186018"
+      },
+      {
+        "sentiment": "Bullish",
+        "article_title": "Is Meta Platforms, Inc. (META) the Best Metaverse Stock to Invest in?",
+        "article_url": "https://finance.yahoo.com/news/meta-platforms-inc-meta-best-235527388.html",
+        "timestamp": "2025-04-20T22:07:48.751754"
+      },
+      {
+        "sentiment": "Neutral",
+        "article_title": "Taxes on super rich and tech giants stall under Trump",
+        "article_url": "https://economictimes.indiatimes.com/news/international/global-trends/taxes-on-super-rich-and-tech-giants-stall-under-trump/articleshow/120447581.cms",
+        "timestamp": "2025-04-20T22:53:00.552475"
+      },
+      {
+        "sentiment": "Neutral",
+        "article_title": "Taxes on super rich and tech giants stall under Trump",
+        "article_url": "https://www.digitaljournal.com/world/taxes-on-super-rich-and-tech-giants-stall-under-trump/article",
+        "timestamp": "2025-04-20T22:53:00.989806"
+      },
+      {
+        "sentiment": "Bearish",
+        "article_title": "Taxes On Super Rich And Tech Giants Stall Under Trump",
+        "article_url": "https://www.ibtimes.com/taxes-super-rich-tech-giants-stall-under-trump-3770698",
+        "timestamp": "2025-04-20T22:53:01.643243"
+      }
+    ],
+    "AMD": [
+      {
+        "sentiment": "Bullish",
+        "article_title": "AMD's CTO says AI inference will move out of data centers and increasingly to phones and laptops",
+        "article_url": "https://www.businessinsider.com/ai-workloads-transition-inference-amd-mark-papermaster-edge-devices-2025-4",
+        "timestamp": "2025-04-20T04:57:26.210450"
+      },
+      {
+        "sentiment": "Bullish",
+        "article_title": "AMD's CTO says AI inference will move out of data centers and increasingly to phones and laptops",
+        "article_url": "https://www.businessinsider.com/ai-workloads-transition-inference-amd-mark-papermaster-edge-devices-2025-4",
+        "timestamp": "2025-04-20T05:12:37.460464"
+      },
+      {
+        "sentiment": "Bullish",
+        "article_title": "AMD's CTO says AI inference will move out of data centers and increasingly to phones and laptops",
+        "article_url": "https://www.businessinsider.com/ai-workloads-transition-inference-amd-mark-papermaster-edge-devices-2025-4",
+        "timestamp": "2025-04-20T05:27:50.290383"
+      },
+      {
+        "sentiment": "Bullish",
+        "article_title": "AMD's CTO says AI inference will move out of data centers and increasingly to phones and laptops",
+        "article_url": "https://www.businessinsider.com/ai-workloads-transition-inference-amd-mark-papermaster-edge-devices-2025-4",
+        "timestamp": "2025-04-20T05:43:01.787681"
+      },
+      {
+        "sentiment": "Bullish",
+        "article_title": "AMD's CTO says AI inference will move out of data centers and increasingly to phones and laptops",
+        "article_url": "https://www.businessinsider.com/ai-workloads-transition-inference-amd-mark-papermaster-edge-devices-2025-4",
+        "timestamp": "2025-04-20T05:58:11.961651"
+      }
+    ]
+  },
+  "last_updated": "2025-04-20T22:53:03.746858"
+}

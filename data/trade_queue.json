@@ -1,0 +1,82 @@
+[
+  {
+    "symbol": "AAPL",
+    "decision": "HOLD",
+    "sentiment": "Neutral",
+    "news_title": null,
+    "queued_at": "2025-04-18T21:36:50.521393",
+    "updated_at": "2025-04-20T22:53:05.716821"
+  },
+  {
+    "symbol": "MSFT",
+    "decision": "HOLD",
+    "sentiment": "Neutral",
+    "news_title": null,
+    "queued_at": "2025-04-18T21:36:50.683251",
+    "updated_at": "2025-04-20T22:53:05.892328"
+  },
+  {
+    "symbol": "GOOGL",
+    "decision": "HOLD",
+    "sentiment": "Neutral",
+    "news_title": null,
+    "queued_at": "2025-04-18T21:36:50.789132",
+    "updated_at": "2025-04-20T22:53:06.003201"
+  },
+  {
+    "symbol": "AMZN",
+    "decision": "HOLD",
+    "sentiment": "Neutral",
+    "news_title": null,
+    "queued_at": "2025-04-18T21:36:50.867024",
+    "updated_at": "2025-04-20T22:53:06.139297"
+  },
+  {
+    "symbol": "META",
+    "decision": "HOLD",
+    "sentiment": "Neutral",
+    "news_title": null,
+    "queued_at": "2025-04-18T21:36:50.970037",
+    "updated_at": "2025-04-20T22:53:06.268077"
+  },
+  {
+    "symbol": "TSLA",
+    "decision": "HOLD",
+    "sentiment": "Neutral",
+    "news_title": null,
+    "queued_at": "2025-04-18T21:36:51.056075",
+    "updated_at": "2025-04-20T22:53:06.394260"
+  },
+  {
+    "symbol": "NVDA",
+    "decision": "HOLD",
+    "sentiment": "Neutral",
+    "news_title": null,
+    "queued_at": "2025-04-18T21:36:51.151249",
+    "updated_at": "2025-04-20T22:53:06.530879"
+  },
+  {
+    "symbol": "AMD",
+    "decision": "HOLD",
+    "sentiment": "Neutral",
+    "news_title": null,
+    "queued_at": "2025-04-18T21:36:51.234290",
+    "updated_at": "2025-04-20T22:53:06.675507"
+  },
+  {
+    "symbol": "INTC",
+    "decision": "HOLD",
+    "sentiment": "Neutral",
+    "news_title": null,
+    "queued_at": "2025-04-18T21:36:51.341373",
+    "updated_at": "2025-04-20T22:53:06.803987"
+  },
+  {
+    "symbol": "IBM",
+    "decision": "HOLD",
+    "sentiment": "Neutral",
+    "news_title": null,
+    "queued_at": "2025-04-18T21:36:51.434975",
+    "updated_at": "2025-04-20T22:53:06.917878"
+  }
+]

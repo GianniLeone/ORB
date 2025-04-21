@@ -1,0 +1,4 @@
+2025-04-17 11:49:46,332 - INFO - Starting ORB News Trader Bot
+2025-04-17 11:49:46,333 - ERROR - Unhandled error in bot: module 'signal' has no attribute 'SIGALRM'
+2025-04-18 21:19:16,321 - INFO - Starting ORB News Trader Bot
+2025-04-18 21:19:16,322 - ERROR - Unhandled error in bot: module 'signal' has no attribute 'SIGALRM'

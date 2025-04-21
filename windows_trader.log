@@ -1,0 +1,179 @@
+2025-04-18 22:44:57,502 - INFO - Trade queue module loaded successfully
+2025-04-18 22:44:57,502 - INFO - Starting Windows-compatible ORB News Trader Bot
+2025-04-18 22:44:57,543 - INFO - Loaded previous state with 0 ORB ranges
+2025-04-18 22:44:57,546 - INFO - Starting trading cycle
+2025-04-18 22:44:57,675 - INFO - Connecting to Alpaca account
+2025-04-18 22:44:57,700 - INFO - Connected to Alpaca account: a1f52315-0e30-4012-bf25-411d24167840
+2025-04-18 22:44:57,713 - INFO - Cash balance: $18612.05
+2025-04-18 22:44:57,713 - INFO - Portfolio value: $98834.05
+2025-04-18 22:44:57,714 - INFO - Processing news data
+2025-04-18 22:44:57,715 - INFO - Fetching news with query: AAPL OR MSFT OR GOOGL OR AMZN OR META
+2025-04-18 22:44:57,861 - INFO - Received 10 articles from News API
+2025-04-18 22:44:57,861 - INFO - Skipping non-English article: Apple Inc. (AAPL)s ...
+2025-04-18 22:44:57,862 - INFO - Skipping non-English article: Just before Mark Zuc...
+2025-04-18 22:44:57,862 - INFO - Processed 8 English articles
+2025-04-18 22:44:57,862 - INFO - Processing: UFC 314 Payout Perspective...
+2025-04-18 22:44:57,862 - INFO - Sending request to OpenAI API
+2025-04-18 22:44:58,732 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 22:44:58,738 - INFO - GPT response received
+2025-04-18 22:44:58,740 - INFO - Sentiment: Neutral
+2025-04-18 22:44:58,740 - INFO - Related companies: []
+2025-04-18 22:44:58,740 - INFO - Processing: Major Japan Life Insurer to Pile Into Domestic Super-Long Bonds...
+2025-04-18 22:44:58,741 - INFO - Sending request to OpenAI API
+2025-04-18 22:44:59,188 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 22:44:59,194 - INFO - GPT response received
+2025-04-18 22:44:59,194 - INFO - Sentiment: Neutral
+2025-04-18 22:44:59,195 - INFO - Related companies: ['UnitedHealth']
+2025-04-18 22:44:59,195 - INFO - Processing: Netflix Darling Stocks Rise as Korea Election, Tariff Haven Bets...
+2025-04-18 22:44:59,244 - INFO - Sending request to OpenAI API
+2025-04-18 22:44:59,718 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 22:44:59,721 - INFO - GPT response received
+2025-04-18 22:44:59,721 - INFO - Sentiment: Bullish
+2025-04-18 22:44:59,731 - INFO - Related companies: ['Netflix', 'UnitedHealth']
+2025-04-18 22:44:59,732 - INFO - Processing: BOJ will keep raising rates if inflation on track, Governor Ueda says...
+2025-04-18 22:44:59,732 - INFO - Sending request to OpenAI API
+2025-04-18 22:45:00,229 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 22:45:00,235 - INFO - GPT response received
+2025-04-18 22:45:00,235 - INFO - Sentiment: Neutral
+2025-04-18 22:45:00,236 - INFO - Related companies: ['UnitedHealth']
+2025-04-18 22:45:00,236 - INFO - Processing: Mazda to Pause US Production of CX-50 Cars Destined for Canada...
+2025-04-18 22:45:00,237 - INFO - Sending request to OpenAI API
+2025-04-18 22:45:00,697 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 22:45:00,702 - INFO - GPT response received
+2025-04-18 22:45:00,706 - INFO - Sentiment: Neutral
+2025-04-18 22:45:00,707 - INFO - Related companies: ['Mazda', 'UnitedHealth']
+2025-04-18 22:45:00,707 - INFO - Processing: Alphabet (GOOGL) Expected to Beat Earnings as AI Push Remains Strong Despite Ad Headwinds...
+2025-04-18 22:45:00,708 - INFO - Sending request to OpenAI API
+2025-04-18 22:45:01,215 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 22:45:01,218 - INFO - GPT response received
+2025-04-18 22:45:01,228 - INFO - Sentiment: Bullish
+2025-04-18 22:45:01,228 - INFO - Related companies: ['Alphabet']
+2025-04-18 22:45:01,229 - INFO - Matched company 'Alphabet' to symbol GOOGL
+2025-04-18 22:45:01,229 - INFO - Processing: What to know about Trump's antitrust efforts against tech giants...
+2025-04-18 22:45:01,230 - INFO - Sending request to OpenAI API
+2025-04-18 22:45:01,920 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 22:45:01,924 - INFO - GPT response received
+2025-04-18 22:45:01,925 - INFO - Sentiment: Bearish
+2025-04-18 22:45:01,926 - INFO - Related companies: ['Google']
+2025-04-18 22:45:01,937 - INFO - Matched company 'Google' to symbol GOOGL
+2025-04-18 22:45:01,938 - INFO - Processing: Forget Negotiating. China and the US Are Still Fighting About Talking...
+2025-04-18 22:45:01,991 - INFO - Sending request to OpenAI API
+2025-04-18 22:45:02,586 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 22:45:02,589 - INFO - GPT response received
+2025-04-18 22:45:02,590 - INFO - Sentiment: Bearish
+2025-04-18 22:45:02,590 - INFO - Related companies: ['UnitedHealth']
+2025-04-18 22:45:02,592 - INFO - Saved current trading state
+2025-04-18 22:45:02,593 - INFO - Processed 8 articles, updated sentiment for 2 symbol-article pairs
+2025-04-18 22:45:02,930 - WARNING - No bars available within opening range for AAPL
+2025-04-18 22:45:03,004 - INFO - Calculated opening range for AAPL: high=$197.20, low=$194.67
+2025-04-18 22:45:03,175 - WARNING - No bars available within opening range for MSFT
+2025-04-18 22:45:03,214 - INFO - Calculated opening range for MSFT: high=$374.32, low=$371.01
+2025-04-18 22:45:03,346 - WARNING - No bars available within opening range for GOOGL
+2025-04-18 22:45:03,385 - INFO - Calculated opening range for GOOGL: high=$154.68, low=$153.60
+2025-04-18 22:45:03,582 - WARNING - No bars available within opening range for AMZN
+2025-04-18 22:45:03,615 - INFO - Calculated opening range for AMZN: high=$176.21, low=$172.96
+2025-04-18 22:45:03,697 - WARNING - No bars available within opening range for META
+2025-04-18 22:45:03,733 - INFO - Calculated opening range for META: high=$506.30, low=$500.80
+2025-04-18 22:45:03,826 - WARNING - No bars available within opening range for TSLA
+2025-04-18 22:45:03,868 - INFO - Calculated opening range for TSLA: high=$243.88, low=$239.44
+2025-04-18 22:45:03,971 - WARNING - No bars available within opening range for NVDA
+2025-04-18 22:45:04,012 - INFO - Calculated opening range for NVDA: high=$104.47, low=$102.51
+2025-04-18 22:45:04,295 - WARNING - No bars available within opening range for AMD
+2025-04-18 22:45:04,337 - INFO - Calculated opening range for AMD: high=$88.84, low=$87.61
+2025-04-18 22:45:04,504 - WARNING - No bars available within opening range for INTC
+2025-04-18 22:45:04,546 - INFO - Calculated opening range for INTC: high=$19.10, low=$18.74
+2025-04-18 22:45:04,790 - WARNING - No bars available within opening range for IBM
+2025-04-18 22:45:04,827 - INFO - Calculated opening range for IBM: high=$239.72, low=$237.40
+2025-04-18 22:45:04,855 - INFO - Processing symbol: AAPL
+2025-04-18 22:45:04,955 - INFO - No ORB breakout for AAPL: price $196.98 within range
+2025-04-18 22:45:04,955 - INFO - Average sentiment for AAPL: 0.50 (Neutral)
+2025-04-18 22:45:04,956 - INFO - Decision for AAPL: HOLD (confidence: 0.60)
+2025-04-18 22:45:04,956 - INFO - Reason: ORB and news sentiment both suggest HOLD
+2025-04-18 22:45:04,977 - INFO - Market is closed, queueing HOLD for AAPL
+2025-04-18 22:45:05,010 - INFO - Loaded 10 queued trades
+2025-04-18 22:45:05,010 - INFO - Updating existing queued trade for AAPL from HOLD to HOLD
+2025-04-18 22:45:05,011 - INFO - Saved 10 queued trades
+2025-04-18 22:45:05,012 - INFO - Processing symbol: MSFT
+2025-04-18 22:45:05,084 - INFO - ORB SELL signal for MSFT: price $367.78 < low breakout $370.27
+2025-04-18 22:45:05,095 - INFO - Average sentiment for MSFT: 0.50 (Neutral)
+2025-04-18 22:45:05,096 - INFO - Decision for MSFT: SELL (confidence: 0.70)
+2025-04-18 22:45:05,097 - INFO - Reason: ORB signal SELL overrides news sentiment HOLD
+2025-04-18 22:45:05,117 - INFO - Market is closed, queueing SELL for MSFT
+2025-04-18 22:45:05,136 - INFO - Loaded 10 queued trades
+2025-04-18 22:45:05,155 - INFO - Updating existing queued trade for MSFT from HOLD to SELL
+2025-04-18 22:45:05,159 - INFO - Saved 10 queued trades
+2025-04-18 22:45:05,160 - INFO - Processing symbol: GOOGL
+2025-04-18 22:45:05,211 - INFO - ORB SELL signal for GOOGL: price $151.16 < low breakout $153.29
+2025-04-18 22:45:05,221 - INFO - Average sentiment for GOOGL: 0.38 (Neutral)
+2025-04-18 22:45:05,222 - INFO - Decision for GOOGL: SELL (confidence: 0.70)
+2025-04-18 22:45:05,223 - INFO - Reason: ORB signal SELL overrides news sentiment HOLD
+2025-04-18 22:45:05,244 - INFO - Market is closed, queueing SELL for GOOGL
+2025-04-18 22:45:05,263 - INFO - Loaded 10 queued trades
+2025-04-18 22:45:05,271 - INFO - Updating existing queued trade for GOOGL from HOLD to SELL
+2025-04-18 22:45:05,273 - INFO - Saved 10 queued trades
+2025-04-18 22:45:05,276 - INFO - Processing symbol: AMZN
+2025-04-18 22:45:05,326 - INFO - ORB SELL signal for AMZN: price $172.61 < low breakout $172.61
+2025-04-18 22:45:05,335 - INFO - Average sentiment for AMZN: 0.50 (Neutral)
+2025-04-18 22:45:05,338 - INFO - Decision for AMZN: SELL (confidence: 0.70)
+2025-04-18 22:45:05,338 - INFO - Reason: ORB signal SELL overrides news sentiment HOLD
+2025-04-18 22:45:05,358 - INFO - Market is closed, queueing SELL for AMZN
+2025-04-18 22:45:05,380 - INFO - Loaded 10 queued trades
+2025-04-18 22:45:05,384 - INFO - Updating existing queued trade for AMZN from HOLD to SELL
+2025-04-18 22:45:05,391 - INFO - Saved 10 queued trades
+2025-04-18 22:45:05,396 - INFO - Processing symbol: META
+2025-04-18 22:45:05,449 - INFO - No ORB breakout for META: price $501.48 within range
+2025-04-18 22:45:05,463 - INFO - Average sentiment for META: 0.00 (Bearish)
+2025-04-18 22:45:05,464 - INFO - Decision for META: SELL (confidence: 0.60)
+2025-04-18 22:45:05,464 - INFO - Reason: News sentiment suggests SELL while ORB indicates HOLD
+2025-04-18 22:45:05,484 - INFO - Market is closed, queueing SELL for META
+2025-04-18 22:45:05,498 - INFO - Loaded 10 queued trades
+2025-04-18 22:45:05,499 - INFO - Updating existing queued trade for META from HOLD to SELL
+2025-04-18 22:45:05,500 - INFO - Saved 10 queued trades
+2025-04-18 22:45:05,501 - INFO - Processing symbol: TSLA
+2025-04-18 22:45:05,616 - INFO - No ORB breakout for TSLA: price $241.37 within range
+2025-04-18 22:45:05,617 - INFO - Decision for TSLA: HOLD (confidence: 0.60)
+2025-04-18 22:45:05,617 - INFO - Reason: Using ORB signal only (no news data)
+2025-04-18 22:45:05,637 - INFO - Market is closed, queueing HOLD for TSLA
+2025-04-18 22:45:05,668 - INFO - Loaded 10 queued trades
+2025-04-18 22:45:05,674 - INFO - Updating existing queued trade for TSLA from HOLD to HOLD
+2025-04-18 22:45:05,682 - INFO - Saved 10 queued trades
+2025-04-18 22:45:05,682 - INFO - Processing symbol: NVDA
+2025-04-18 22:45:05,740 - INFO - ORB SELL signal for NVDA: price $101.49 < low breakout $102.30
+2025-04-18 22:45:05,748 - INFO - Average sentiment for NVDA: 0.50 (Neutral)
+2025-04-18 22:45:05,750 - INFO - Decision for NVDA: SELL (confidence: 0.70)
+2025-04-18 22:45:05,751 - INFO - Reason: ORB signal SELL overrides news sentiment HOLD
+2025-04-18 22:45:05,770 - INFO - Market is closed, queueing SELL for NVDA
+2025-04-18 22:45:05,788 - INFO - Loaded 10 queued trades
+2025-04-18 22:45:05,794 - INFO - Updating existing queued trade for NVDA from HOLD to SELL
+2025-04-18 22:45:05,809 - INFO - Saved 10 queued trades
+2025-04-18 22:45:05,810 - INFO - Processing symbol: AMD
+2025-04-18 22:45:05,856 - INFO - No ORB breakout for AMD: price $87.50 within range
+2025-04-18 22:45:05,866 - INFO - Decision for AMD: HOLD (confidence: 0.60)
+2025-04-18 22:45:05,869 - INFO - Reason: Using ORB signal only (no news data)
+2025-04-18 22:45:05,890 - INFO - Market is closed, queueing HOLD for AMD
+2025-04-18 22:45:05,919 - INFO - Loaded 10 queued trades
+2025-04-18 22:45:05,929 - INFO - Updating existing queued trade for AMD from HOLD to HOLD
+2025-04-18 22:45:05,933 - INFO - Saved 10 queued trades
+2025-04-18 22:45:05,933 - INFO - Processing symbol: INTC
+2025-04-18 22:45:06,046 - INFO - No ORB breakout for INTC: price $18.93 within range
+2025-04-18 22:45:06,046 - INFO - Decision for INTC: HOLD (confidence: 0.60)
+2025-04-18 22:45:06,047 - INFO - Reason: Using ORB signal only (no news data)
+2025-04-18 22:45:06,067 - INFO - Market is closed, queueing HOLD for INTC
+2025-04-18 22:45:06,084 - INFO - Loaded 10 queued trades
+2025-04-18 22:45:06,091 - INFO - Updating existing queued trade for INTC from HOLD to HOLD
+2025-04-18 22:45:06,092 - INFO - Saved 10 queued trades
+2025-04-18 22:45:06,094 - INFO - Processing symbol: IBM
+2025-04-18 22:45:06,205 - INFO - No ORB breakout for IBM: price $238.81 within range
+2025-04-18 22:45:06,206 - INFO - Decision for IBM: HOLD (confidence: 0.60)
+2025-04-18 22:45:06,206 - INFO - Reason: Using ORB signal only (no news data)
+2025-04-18 22:45:06,226 - INFO - Market is closed, queueing HOLD for IBM
+2025-04-18 22:45:06,247 - INFO - Loaded 10 queued trades
+2025-04-18 22:45:06,250 - INFO - Updating existing queued trade for IBM from HOLD to HOLD
+2025-04-18 22:45:06,254 - INFO - Saved 10 queued trades
+2025-04-18 22:45:06,280 - INFO - Results saved to file
+2025-04-18 22:45:06,281 - INFO - 
+TRADING RESULTS SUMMARY:
+2025-04-18 22:45:06,281 - INFO - Processed 10 symbols
+2025-04-18 22:45:06,282 - INFO - Made 10 trading decisions
+2025-04-18 22:45:06,282 - INFO - Portfolio value: $98834.05
+2025-04-18 22:45:06,283 - INFO - ORB News Trader Bot completed successfully

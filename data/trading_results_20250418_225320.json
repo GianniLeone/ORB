@@ -1,0 +1,110 @@
+{
+  "timestamp": "2025-04-18T22:53:20.769022",
+  "portfolio_value": {
+    "cash": 18612.05,
+    "portfolio_value": 98834.05,
+    "positions_value": 80222.0
+  },
+  "results": [
+    {
+      "symbol": "AAPL",
+      "decision": "BUY",
+      "confidence": 0.6,
+      "reason": "News sentiment suggests BUY while ORB indicates HOLD",
+      "trade_executed": true,
+      "message": "Queued BUY for next market open",
+      "queued": true,
+      "timestamp": "2025-04-18T22:53:19.413552"
+    },
+    {
+      "symbol": "MSFT",
+      "decision": "SELL",
+      "confidence": 0.7,
+      "reason": "ORB signal SELL overrides news sentiment HOLD",
+      "trade_executed": true,
+      "message": "Queued SELL for next market open",
+      "queued": true,
+      "timestamp": "2025-04-18T22:53:19.536677"
+    },
+    {
+      "symbol": "GOOGL",
+      "decision": "SELL",
+      "confidence": 0.7,
+      "reason": "ORB signal SELL overrides news sentiment HOLD",
+      "trade_executed": true,
+      "message": "Queued SELL for next market open",
+      "queued": true,
+      "timestamp": "2025-04-18T22:53:19.654432"
+    },
+    {
+      "symbol": "AMZN",
+      "decision": "SELL",
+      "confidence": 0.7,
+      "reason": "ORB signal SELL overrides news sentiment HOLD",
+      "trade_executed": true,
+      "message": "Queued SELL for next market open",
+      "queued": true,
+      "timestamp": "2025-04-18T22:53:19.776720"
+    },
+    {
+      "symbol": "META",
+      "decision": "SELL",
+      "confidence": 0.6,
+      "reason": "News sentiment suggests SELL while ORB indicates HOLD",
+      "trade_executed": true,
+      "message": "Queued SELL for next market open",
+      "queued": true,
+      "timestamp": "2025-04-18T22:53:19.880112"
+    },
+    {
+      "symbol": "TSLA",
+      "decision": "HOLD",
+      "confidence": 0.6,
+      "reason": "Using ORB signal only (no news data)",
+      "trade_executed": true,
+      "message": "Queued HOLD for next market open",
+      "queued": true,
+      "timestamp": "2025-04-18T22:53:19.984465"
+    },
+    {
+      "symbol": "NVDA",
+      "decision": "SELL",
+      "confidence": 0.7,
+      "reason": "ORB signal SELL overrides news sentiment HOLD",
+      "trade_executed": true,
+      "message": "Queued SELL for next market open",
+      "queued": true,
+      "timestamp": "2025-04-18T22:53:20.130554"
+    },
+    {
+      "symbol": "AMD",
+      "decision": "HOLD",
+      "confidence": 0.6,
+      "reason": "Using ORB signal only (no news data)",
+      "trade_executed": true,
+      "message": "Queued HOLD for next market open",
+      "queued": true,
+      "timestamp": "2025-04-18T22:53:20.365437"
+    },
+    {
+      "symbol": "INTC",
+      "decision": "HOLD",
+      "confidence": 0.6,
+      "reason": "Using ORB signal only (no news data)",
+      "trade_executed": true,
+      "message": "Queued HOLD for next market open",
+      "queued": true,
+      "timestamp": "2025-04-18T22:53:20.536951"
+    },
+    {
+      "symbol": "IBM",
+      "decision": "HOLD",
+      "confidence": 0.6,
+      "reason": "Using ORB signal only (no news data)",
+      "trade_executed": true,
+      "message": "Queued HOLD for next market open",
+      "queued": true,
+      "timestamp": "2025-04-18T22:53:20.746893"
+    }
+  ]
+}

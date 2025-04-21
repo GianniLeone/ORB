@@ -8,12 +8,13 @@ pytz>=2023.3
 pandas>=1.5.0
 numpy>=1.22.0
 
-# For Windows Service (includes servicemanager, win32event, win32service, win32serviceutil)
-pywin32>=305; platform_system=="Windows"
+# For Windows Service
+pywin32>=305
+pywin32-ctypes>=0.2.0
+pypiwin32>=223; platform_system=="Windows"
 
 # For data analysis
 matplotlib>=3.6.0
 seaborn>=0.12.0
 
-# For logging and error handling
-logging>=0.5.1.2
+# logging is part of the Python standard library - no need to install separately
