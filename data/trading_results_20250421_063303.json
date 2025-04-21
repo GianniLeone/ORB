@@ -1,0 +1,110 @@
+{
+  "timestamp": "2025-04-21T06:33:03.993633",
+  "portfolio_value": {
+    "cash": 18612.05,
+    "portfolio_value": 97630.39,
+    "positions_value": 79018.34
+  },
+  "results": [
+    {
+      "symbol": "AAPL",
+      "decision": "HOLD",
+      "confidence": 0.5,
+      "reason": "No ORB data available",
+      "trade_executed": true,
+      "message": "Queued HOLD for next market open",
+      "queued": true,
+      "timestamp": "2025-04-21T06:33:02.935934"
+    },
+    {
+      "symbol": "MSFT",
+      "decision": "HOLD",
+      "confidence": 0.5,
+      "reason": "No ORB data available",
+      "trade_executed": true,
+      "message": "Queued HOLD for next market open",
+      "queued": true,
+      "timestamp": "2025-04-21T06:33:03.038931"
+    },
+    {
+      "symbol": "GOOGL",
+      "decision": "HOLD",
+      "confidence": 0.5,
+      "reason": "No ORB data available",
+      "trade_executed": true,
+      "message": "Queued HOLD for next market open",
+      "queued": true,
+      "timestamp": "2025-04-21T06:33:03.138920"
+    },
+    {
+      "symbol": "AMZN",
+      "decision": "HOLD",
+      "confidence": 0.5,
+      "reason": "No ORB data available",
+      "trade_executed": true,
+      "message": "Queued HOLD for next market open",
+      "queued": true,
+      "timestamp": "2025-04-21T06:33:03.324774"
+    },
+    {
+      "symbol": "META",
+      "decision": "HOLD",
+      "confidence": 0.5,
+      "reason": "No ORB data available",
+      "trade_executed": true,
+      "message": "Queued HOLD for next market open",
+      "queued": true,
+      "timestamp": "2025-04-21T06:33:03.460834"
+    },
+    {
+      "symbol": "TSLA",
+      "decision": "HOLD",
+      "confidence": 0.5,
+      "reason": "No ORB data available",
+      "trade_executed": true,
+      "message": "Queued HOLD for next market open",
+      "queued": true,
+      "timestamp": "2025-04-21T06:33:03.558879"
+    },
+    {
+      "symbol": "NVDA",
+      "decision": "HOLD",
+      "confidence": 0.5,
+      "reason": "No ORB data available",
+      "trade_executed": true,
+      "message": "Queued HOLD for next market open",
+      "queued": true,
+      "timestamp": "2025-04-21T06:33:03.671646"
+    },
+    {
+      "symbol": "AMD",
+      "decision": "HOLD",
+      "confidence": 0.5,
+      "reason": "No ORB data available",
+      "trade_executed": true,
+      "message": "Queued HOLD for next market open",
+      "queued": true,
+      "timestamp": "2025-04-21T06:33:03.780852"
+    },
+    {
+      "symbol": "INTC",
+      "decision": "HOLD",
+      "confidence": 0.5,
+      "reason": "No ORB data available",
+      "trade_executed": true,
+      "message": "Queued HOLD for next market open",
+      "queued": true,
+      "timestamp": "2025-04-21T06:33:03.874515"
+    },
+    {
+      "symbol": "IBM",
+      "decision": "HOLD",
+      "confidence": 0.5,
+      "reason": "No ORB data available",
+      "trade_executed": true,
+      "message": "Queued HOLD for next market open",
+      "queued": true,
+      "timestamp": "2025-04-21T06:33:03.969897"
+    }
+  ]
+}

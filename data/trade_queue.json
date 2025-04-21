@@ -5,7 +5,7 @@
     "sentiment": "Neutral",
     "news_title": null,
     "queued_at": "2025-04-18T21:36:50.521393",
-    "updated_at": "2025-04-20T22:53:05.716821"
+    "updated_at": "2025-04-21T08:33:50.579837"
   },
   {
     "symbol": "MSFT",
@@ -13,7 +13,7 @@
     "sentiment": "Neutral",
     "news_title": null,
     "queued_at": "2025-04-18T21:36:50.683251",
-    "updated_at": "2025-04-20T22:53:05.892328"
+    "updated_at": "2025-04-21T08:33:50.705111"
   },
   {
     "symbol": "GOOGL",
@@ -21,7 +21,7 @@
     "sentiment": "Neutral",
     "news_title": null,
     "queued_at": "2025-04-18T21:36:50.789132",
-    "updated_at": "2025-04-20T22:53:06.003201"
+    "updated_at": "2025-04-21T08:33:50.784091"
   },
   {
     "symbol": "AMZN",
@@ -29,7 +29,7 @@
     "sentiment": "Neutral",
     "news_title": null,
     "queued_at": "2025-04-18T21:36:50.867024",
-    "updated_at": "2025-04-20T22:53:06.139297"
+    "updated_at": "2025-04-21T08:33:50.887006"
   },
   {
     "symbol": "META",
@@ -37,7 +37,7 @@
     "sentiment": "Neutral",
     "news_title": null,
     "queued_at": "2025-04-18T21:36:50.970037",
-    "updated_at": "2025-04-20T22:53:06.268077"
+    "updated_at": "2025-04-21T08:33:51.036489"
   },
   {
     "symbol": "TSLA",
@@ -45,7 +45,7 @@
     "sentiment": "Neutral",
     "news_title": null,
     "queued_at": "2025-04-18T21:36:51.056075",
-    "updated_at": "2025-04-20T22:53:06.394260"
+    "updated_at": "2025-04-21T08:33:51.122264"
   },
   {
     "symbol": "NVDA",
@@ -53,7 +53,7 @@
     "sentiment": "Neutral",
     "news_title": null,
     "queued_at": "2025-04-18T21:36:51.151249",
-    "updated_at": "2025-04-20T22:53:06.530879"
+    "updated_at": "2025-04-21T08:33:51.223767"
   },
   {
     "symbol": "AMD",
@@ -61,7 +61,7 @@
     "sentiment": "Neutral",
     "news_title": null,
     "queued_at": "2025-04-18T21:36:51.234290",
-    "updated_at": "2025-04-20T22:53:06.675507"
+    "updated_at": "2025-04-21T08:33:51.306543"
   },
   {
     "symbol": "INTC",
@@ -69,7 +69,7 @@
     "sentiment": "Neutral",
     "news_title": null,
     "queued_at": "2025-04-18T21:36:51.341373",
-    "updated_at": "2025-04-20T22:53:06.803987"
+    "updated_at": "2025-04-21T08:33:51.412033"
   },
   {
     "symbol": "IBM",
@@ -77,6 +77,6 @@
     "sentiment": "Neutral",
     "news_title": null,
     "queued_at": "2025-04-18T21:36:51.434975",
-    "updated_at": "2025-04-20T22:53:06.917878"
+    "updated_at": "2025-04-21T08:33:51.516309"
   }
 ]

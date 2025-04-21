@@ -28,6 +28,17 @@ logging.basicConfig(
 )
 logger = logging.getLogger('windows_trader')
 
+# Try to import timezone utilities
+try:
+    from timezone_utils import get_eastern_time, log_current_time
+    TIMEZONE_UTILS_AVAILABLE = True
+    logger.info("Timezone utilities loaded successfully")
+    # Log current timezone info for debugging
+    log_current_time()
+except ImportError:
+    TIMEZONE_UTILS_AVAILABLE = False
+    logger.warning("Timezone utilities not available, using built-in timezone functions")
+
 # Load environment variables
 load_dotenv()
 
@@ -117,9 +128,26 @@ class ORBNewsTrader:
     
     def get_eastern_time(self):
         """Get current time in US Eastern Time"""
-        utc_now = datetime.datetime.now(pytz.UTC)
-        eastern = pytz.timezone('US/Eastern')
-        return utc_now.astimezone(eastern)
+        if TIMEZONE_UTILS_AVAILABLE:
+            # Use the imported function
+            from timezone_utils import get_eastern_time as get_et
+            et_time = get_et()
+            logger.debug(f"Using timezone_utils.get_eastern_time(): {et_time.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+            return et_time
+        else:
+            # Fallback implementation
+            utc_now = datetime.datetime.now(pytz.UTC)
+            eastern = pytz.timezone('US/Eastern')
+            et_time = utc_now.astimezone(eastern)
+            
+            # Log for debugging
+            is_dst = et_time.dst() != datetime.timedelta(0)
+            logger.debug(f"Fallback timezone calculation in trader:")
+            logger.debug(f"UTC time: {utc_now.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+            logger.debug(f"Eastern time: {et_time.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+            logger.debug(f"Is DST active: {is_dst}")
+            
+            return et_time
     
     def is_market_open(self):
         """Check if the market is currently open"""
@@ -1130,10 +1158,45 @@ Article:
         except Exception as e:
             logger.error(f"Error in trading cycle: {e}")
             return results
+        
+def test_timezone():
+    """Test timezone functionality"""
+    utc_now = datetime.datetime.now(pytz.UTC)
+    eastern = pytz.timezone('US/Eastern')
+    et_now = utc_now.astimezone(eastern)
+    local_now = datetime.datetime.now()
+    
+    logger.info("=== Timezone Test ===")
+    logger.info(f"UTC time: {utc_now.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+    logger.info(f"ET time: {et_now.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+    logger.info(f"Local time: {local_now.strftime('%Y-%m-%d %H:%M:%S')}")
+    logger.info(f"Is DST active in ET: {et_now.dst() != datetime.timedelta(0)}")
+    
+    # Try to get local timezone name
+    try:
+        local_tz = datetime.datetime.now(datetime.timezone.utc).astimezone().tzinfo
+        logger.info(f"Local timezone: {local_tz}")
+    except Exception as e:
+        logger.error(f"Could not determine local timezone: {e}")
+    
+    # Compare different ways of getting Eastern Time
+    if TIMEZONE_UTILS_AVAILABLE:
+        utils_et = get_eastern_time()
+        logger.info(f"ET time via timezone_utils: {utils_et.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+        
+        if utils_et.hour != et_now.hour:
+            logger.error(f"TIMEZONE INCONSISTENCY: hours don't match! Direct: {et_now.hour}, Utils: {utils_et.hour}")
+        else:
+            logger.info(f"Timezone consistency check passed: ET hour is {et_now.hour}")
+    
+    return et_now        
 
 def main():
     """Main function for the trading bot"""
     logger.info("Starting Windows-compatible ORB News Trader Bot")
+    
+    # Test timezone functionality first
+    test_timezone()
     
     try:
         # Initialize and run the bot

@@ -21,7 +21,37 @@ def get_eastern_time():
     eastern = pytz.timezone('US/Eastern')
     eastern_time = utc_now.astimezone(eastern)
     
+    # Log for debugging
+    logger.debug(f"UTC time: {utc_now.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+    logger.debug(f"Eastern time: {eastern_time.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+    logger.debug(f"Is DST active: {eastern_time.dst() != datetime.timedelta(0)}")
+    
     return eastern_time
+
+def log_current_time():
+    """Log the current time in various timezones for debugging"""
+    # Get current time in various timezones
+    now_utc = datetime.datetime.now(pytz.UTC)
+    eastern = pytz.timezone('US/Eastern')
+    now_et = now_utc.astimezone(eastern)
+    now_local = datetime.datetime.now()
+    
+    # Try to get the local timezone name
+    try:
+        local_tz = datetime.datetime.now(datetime.timezone.utc).astimezone().tzinfo
+    except:
+        local_tz = "Unknown"
+    
+    # Log all times with detailed information
+    logger.info(f"Current times - UTC: {now_utc.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+    logger.info(f"Current times - ET:  {now_et.strftime('%Y-%m-%d %H:%M:%S %Z')} (DST active: {now_et.dst() != datetime.timedelta(0)})")
+    logger.info(f"Current times - Local: {now_local.strftime('%Y-%m-%d %H:%M:%S')} (timezone: {local_tz})")
+    
+    # Get the current market period
+    period_key, period_name, interval = get_current_market_period()
+    logger.info(f"Current market period: {period_key} ({period_name}), interval: {interval} minutes")
+    
+    return now_et
 
 def get_current_market_period():
     """
@@ -35,84 +65,49 @@ def get_current_market_period():
     
     # Extract hour (0-23) in Eastern Time
     et_hour = et_now.hour
+    et_minute = et_now.minute
     
-    # Define market periods with their time ranges and intervals
-    market_periods = [
-        {
-            "key": "4am-9am",
-            "name": "Pre-market",
-            "start_hour": 4,
-            "end_hour": 9,
-            "interval_minutes": 15
-        },
-        {
-            "key": "9am-12pm",
-            "name": "Market open",
-            "start_hour": 9,
-            "end_hour": 12,
-            "interval_minutes": 5
-        },
-        {
-            "key": "12pm-3pm",
-            "name": "Midday",
-            "start_hour": 12,
-            "end_hour": 15,
-            "interval_minutes": 30
-        },
-        {
-            "key": "3pm-4pm",
-            "name": "Power hour",
-            "start_hour": 15,
-            "end_hour": 16,
-            "interval_minutes": 10
-        },
-        {
-            "key": "4pm-6pm",
-            "name": "After-hours",
-            "start_hour": 16,
-            "end_hour": 18,
-            "interval_minutes": 20
-        },
-        {
-            "key": "6pm-12am",
-            "name": "Evening",
-            "start_hour": 18,
-            "end_hour": 24,  # midnight
-            "interval_minutes": 45
-        },
-        {
-            "key": "12am-4am",
-            "name": "Overnight",
-            "start_hour": 0,  # midnight
-            "end_hour": 4,
-            "interval_minutes": 90
-        }
-    ]
+    # Log the hour for debugging
+    logger.debug(f"Current hour in ET: {et_hour}")
     
-    # Find the current period
-    for period in market_periods:
-        if period["start_hour"] <= et_hour < period["end_hour"]:
-            logger.debug(f"Current ET hour: {et_hour}, matching period: {period['key']}")
-            return (
-                period["key"],
-                period["name"], 
-                period["interval_minutes"]
-            )
-    
-    # This should never happen since the periods cover all 24 hours
-    logger.error(f"Could not determine market period for hour {et_hour}")
-    # Default to the overnight period
-    return ("12am-4am", "Overnight", 90)
+    # Determine the period based on time
+    if 4 <= et_hour < 9 or (et_hour == 9 and et_minute < 30):
+        return ("pre_market", "Pre-market", 15)
+    elif (et_hour == 9 and et_minute >= 30) or (et_hour == 10 and et_minute < 30):
+        return ("market_open", "Market open", 5)
+    elif (et_hour == 10 and et_minute >= 30) or (et_hour == 11):
+        return ("morning", "Morning session", 15)
+    elif 12 <= et_hour < 14:
+        return ("midday", "Midday", 30)
+    elif 14 <= et_hour < 15:
+        return ("afternoon", "Afternoon session", 15)
+    elif 15 <= et_hour < 16:
+        return ("power_hour", "Power hour", 10)
+    elif 16 <= et_hour < 20:
+        return ("after_hours", "After-hours", 20)
+    elif 20 <= et_hour < 24:
+        return ("evening", "Evening", 45)
+    else:  # 0 <= et_hour < 4
+        return ("overnight", "Overnight", 90)
 
 def log_current_time():
     """Log the current time in various timezones for debugging"""
+    # Get current time in various timezones
     now_utc = datetime.datetime.now(pytz.UTC)
-    now_et = now_utc.astimezone(pytz.timezone('US/Eastern'))
+    eastern = pytz.timezone('US/Eastern')
+    now_et = now_utc.astimezone(eastern)
     now_local = datetime.datetime.now()
     
+    # Try to get the local timezone name
+    try:
+        local_tz = datetime.datetime.now(datetime.timezone.utc).astimezone().tzinfo
+    except:
+        local_tz = "Unknown"
+    
+    # Log all times with detailed information
     logger.info(f"Current times - UTC: {now_utc.strftime('%Y-%m-%d %H:%M:%S %Z')}")
-    logger.info(f"Current times - ET:  {now_et.strftime('%Y-%m-%d %H:%M:%S %Z')}")
-    logger.info(f"Current times - Local: {now_local.strftime('%Y-%m-%d %H:%M:%S')}")
+    logger.info(f"Current times - ET:  {now_et.strftime('%Y-%m-%d %H:%M:%S %Z')} (DST active: {now_et.dst() != datetime.timedelta(0)})")
+    logger.info(f"Current times - Local: {now_local.strftime('%Y-%m-%d %H:%M:%S')} (timezone: {local_tz})")
     
     # Get the current market period
     period_key, period_name, interval = get_current_market_period()
@@ -129,5 +124,13 @@ if __name__ == "__main__":
     logger = logging.getLogger('timezone_utils')
     
     # Test and print timezone information
+    logger.info("=== Testing timezone utilities ===")
     et_time = log_current_time()
     print(f"ET Time: {et_time.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+    print(f"Is DST active: {et_time.dst() != datetime.timedelta(0)}")
+    print(f"Current ET hour: {et_time.hour}")
+    
+    # Test the market period function
+    period_key, period_name, interval = get_current_market_period()
+    print(f"Current market period: {period_key} ({period_name})")
+    print(f"Recommended polling interval: {interval} minutes")

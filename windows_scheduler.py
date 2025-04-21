@@ -23,6 +23,15 @@ logging.basicConfig(
 )
 logger = logging.getLogger('windows_scheduler')
 
+# Import timezone utilities
+try:
+    from timezone_utils import get_eastern_time, get_current_market_period, log_current_time
+    TIMEZONE_UTILS_AVAILABLE = True
+    logger.info("Timezone utilities loaded successfully")
+except ImportError:
+    TIMEZONE_UTILS_AVAILABLE = False
+    logger.warning("Timezone utilities not available, using built-in timezone functions")
+
 # Load environment variables
 load_dotenv()
 
@@ -38,6 +47,15 @@ alpaca = tradeapi.REST(
     ALPACA_PAPER_URL,
     api_version='v2'
 )
+
+# Import timezone utilities
+try:
+    from timezone_utils import get_eastern_time, get_current_market_period, log_current_time
+    TIMEZONE_UTILS_AVAILABLE = True
+    logger.info("Timezone utilities loaded successfully")
+except ImportError:
+    TIMEZONE_UTILS_AVAILABLE = False
+    logger.warning("Timezone utilities not available, using built-in timezone functions")
 
 # Configuration
 CONFIG = {
@@ -65,16 +83,39 @@ running = True
 
 def get_eastern_time():
     """Get current time in US Eastern Time (ET), which is the timezone for US markets"""
-    utc_now = datetime.datetime.now(pytz.UTC)
-    eastern = pytz.timezone('US/Eastern')
-    eastern_time = utc_now.astimezone(eastern)
-    return eastern_time
+    if TIMEZONE_UTILS_AVAILABLE:
+        # Use the imported function
+        from timezone_utils import get_eastern_time as get_et
+        et_time = get_et()
+        logger.debug(f"Using timezone_utils.get_eastern_time(): {et_time.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+        return et_time
+    else:
+        # Fallback implementation
+        utc_now = datetime.datetime.now(pytz.UTC)
+        eastern = pytz.timezone('US/Eastern')
+        eastern_time = utc_now.astimezone(eastern)
+        
+        # Log for debugging
+        is_dst = eastern_time.dst() != datetime.timedelta(0)
+        logger.debug(f"Fallback timezone calculation:")
+        logger.debug(f"UTC time: {utc_now.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+        logger.debug(f"Eastern time: {eastern_time.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+        logger.debug(f"Is DST active: {is_dst}")
+        
+        return eastern_time
 
 def is_market_open():
     """Check if the market is currently open using Alpaca API"""
     try:
         clock = alpaca.get_clock()
-        return clock.is_open
+        is_open = clock.is_open
+        
+        # Log current time for debugging
+        et_now = get_eastern_time()
+        logger.debug(f"Current ET time: {et_now.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+        logger.debug(f"Market is {'open' if is_open else 'closed'}")
+        
+        return is_open
     except Exception as e:
         logger.error(f"Error checking market hours: {e}")
         # Default to closed if we can't check
@@ -82,53 +123,69 @@ def is_market_open():
 
 def is_trading_day():
     """Check if today is a trading day (weekday and not a market holiday)"""
-    # Check if it's a weekend
-    now = datetime.datetime.now()
-    if now.weekday() >= 5:  # 5 = Saturday, 6 = Sunday
+    # Get current Eastern Time
+    et_now = get_eastern_time()
+    
+    # Check if it's a weekend in ET
+    if et_now.weekday() >= 5:  # 5 = Saturday, 6 = Sunday
+        logger.info(f"Not a trading day: It's {et_now.strftime('%A')} in ET")
         return False
     
     # Check if it's a market holiday using Alpaca's calendar
     try:
         calendar = alpaca.get_calendar()
-        today = datetime.date.today().isoformat()
+        today = et_now.date().isoformat()
         
         for day in calendar:
             if day.date.isoformat() == today:
+                logger.info(f"Today ({today}) is a trading day according to Alpaca calendar")
                 return True
         
         # If today is not in the calendar, it's a holiday
+        logger.info(f"Today ({today}) is not a trading day according to Alpaca calendar (likely a holiday)")
         return False
     except Exception as e:
         logger.error(f"Error checking if today is a trading day: {e}")
         # Default to True for weekdays if we can't check
-        return now.weekday() < 5
+        return et_now.weekday() < 5
 
 def get_current_market_period():
     """Determine the current market period based on Eastern Time"""
-    # Get current Eastern Time
-    et_now = get_eastern_time()
-    et_hour = et_now.hour
-    et_minute = et_now.minute
-    
-    # Determine the period based on time
-    if 4 <= et_hour < 9 or (et_hour == 9 and et_minute < 30):
-        return "pre_market"
-    elif (et_hour == 9 and et_minute >= 30) or (et_hour == 10 and et_minute < 30):
-        return "market_open"
-    elif (et_hour == 10 and et_minute >= 30) or (et_hour == 11):
-        return "morning"
-    elif 12 <= et_hour < 14:
-        return "midday"
-    elif 14 <= et_hour < 15:
-        return "afternoon"
-    elif 15 <= et_hour < 16:
-        return "power_hour"
-    elif 16 <= et_hour < 20:
-        return "after_hours"
-    elif 20 <= et_hour < 24:
-        return "evening"
-    else:  # 0 <= et_hour < 4
-        return "overnight"
+    if TIMEZONE_UTILS_AVAILABLE:
+        # Use the imported function
+        from timezone_utils import get_current_market_period as get_period
+        period_key, period_name, interval = get_period()
+        logger.debug(f"Using timezone_utils: Current period: {period_key} ({period_name})")
+        return period_key
+    else:
+        # Fallback implementation
+        # Get current Eastern Time
+        et_now = get_eastern_time()
+        et_hour = et_now.hour
+        et_minute = et_now.minute
+        
+        logger.debug(f"Fallback market period calculation:")
+        logger.debug(f"Current ET hour: {et_hour}, minute: {et_minute}")
+        
+        # Determine the period based on time
+        if 4 <= et_hour < 9 or (et_hour == 9 and et_minute < 30):
+            return "pre_market"
+        elif (et_hour == 9 and et_minute >= 30) or (et_hour == 10 and et_minute < 30):
+            return "market_open"
+        elif (et_hour == 10 and et_minute >= 30) or (et_hour == 11):
+            return "morning"
+        elif 12 <= et_hour < 14:
+            return "midday"
+        elif 14 <= et_hour < 15:
+            return "afternoon"
+        elif 15 <= et_hour < 16:
+            return "power_hour"
+        elif 16 <= et_hour < 20:
+            return "after_hours"
+        elif 20 <= et_hour < 24:
+            return "evening"
+        else:  # 0 <= et_hour < 4
+            return "overnight"
 
 def should_run_now():
     """Determine if the bot should run now based on time and configuration"""
@@ -146,6 +203,10 @@ def should_run_now():
                 period = get_current_market_period()
                 appropriate_interval = CONFIG["check_intervals"][period]
                 
+                # Get current Eastern Time for debugging
+                et_now = get_eastern_time()
+                
+                logger.info(f"Current time (ET): {et_now.strftime('%Y-%m-%d %H:%M:%S %Z')}")
                 logger.info(f"Current period: {period}, interval: {appropriate_interval} minutes")
                 logger.info(f"Minutes since last run: {minutes_since_last_run:.2f}")
                 
@@ -223,7 +284,7 @@ def log_status():
     
     logger.info("=== System Status ===")
     logger.info(f"Current time: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    logger.info(f"Current ET time: {et_now.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+    logger.info(f"Current ET time: {et_now.strftime('%Y-%m-%d %H:%M:%S %Z')} (DST active: {et_now.dst() != datetime.timedelta(0)})")
     logger.info(f"Market is {'open' if market_open else 'closed'}")
     logger.info(f"Today is {'a trading day' if trading_day else 'not a trading day'}")
     logger.info(f"Current period: {current_period}, check interval: {appropriate_interval} minutes")
@@ -240,7 +301,77 @@ def log_status():
         except Exception as e:
             logger.error(f"Error getting portfolio status: {e}")
 
+def test_timezone():
+    """Test timezone functionality to validate settings"""
+    logger.info("=== Testing Timezone Settings ===")
+    
+    # Get current time in various timezones
+    utc_now = datetime.datetime.now(pytz.UTC)
+    eastern = pytz.timezone('US/Eastern')
+    et_now = utc_now.astimezone(eastern)
+    local_now = datetime.datetime.now()
+    
+    # Log times for debugging
+    logger.info(f"UTC time: {utc_now.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+    logger.info(f"ET time via direct conversion: {et_now.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+    
+    # Test our get_eastern_time function
+    function_et = get_eastern_time()
+    logger.info(f"ET time via get_eastern_time(): {function_et.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+    
+    # Validate that both methods return the same hour
+    if et_now.hour != function_et.hour:
+        logger.error(f"TIMEZONE ERROR: ET hours don't match! Direct: {et_now.hour}, Function: {function_et.hour}")
+    else:
+        logger.info(f"Timezone validation successful: ET hour is {et_now.hour}")
+    
+    # Check DST status
+    is_dst = et_now.dst() != datetime.timedelta(0)
+    logger.info(f"Is DST active: {is_dst}")
+    
+    # Test market period detection
+    period = get_current_market_period()
+    logger.info(f"Current market period: {period}")
+    
+    return et_now
+
+def test_timezone():
+    """Test timezone functionality to validate settings"""
+    logger.info("=== Testing Timezone Settings ===")
+    
+    # Get current time in various timezones
+    utc_now = datetime.datetime.now(pytz.UTC)
+    eastern = pytz.timezone('US/Eastern')
+    et_now = utc_now.astimezone(eastern)
+    local_now = datetime.datetime.now()
+    
+    # Log times for debugging
+    logger.info(f"UTC time: {utc_now.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+    logger.info(f"ET time via direct conversion: {et_now.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+    
+    # Test our get_eastern_time function
+    function_et = get_eastern_time()
+    logger.info(f"ET time via get_eastern_time(): {function_et.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+    
+    # Validate that both methods return the same hour
+    if et_now.hour != function_et.hour:
+        logger.error(f"TIMEZONE ERROR: ET hours don't match! Direct: {et_now.hour}, Function: {function_et.hour}")
+    else:
+        logger.info(f"Timezone validation successful: ET hour is {et_now.hour}")
+    
+    # Check DST status
+    is_dst = et_now.dst() != datetime.timedelta(0)
+    logger.info(f"Is DST active: {is_dst}")
+    
+    # Test market period detection
+    period = get_current_market_period()
+    logger.info(f"Current market period: {period}")
+    
+    return et_now
+
 def main_loop():
+    # Test timezone functionality first
+    test_timezone()
     """Main scheduler loop"""
     global running
     
@@ -248,6 +379,9 @@ def main_loop():
     Path("data").mkdir(exist_ok=True)
     Path("data/orders").mkdir(exist_ok=True)
     Path("data/orb_data").mkdir(exist_ok=True)
+    
+    # Test timezone functionality first
+    test_timezone()
     
     # Log initial status
     log_status()
